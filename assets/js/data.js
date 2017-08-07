@@ -9,7 +9,7 @@ var datos = [
 "calificacion":3},
 {"id":3,
 "precio": 22000,,
-"image_url":"3.jpg",
+"image_url":"3.png",
 "calificacion":3},
 {"id":4,
 "precio": 22000,,
@@ -77,7 +77,7 @@ var datos = [
 "calificacion":3},
 {"id":20,
 "precio": 22000,,
-"image_url":"20.jpg",
+"image_url":"20.JPG",
 "calificacion":3},
 
 ]
