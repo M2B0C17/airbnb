@@ -4,11 +4,109 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Airbnb</title>
+	<!-- Viewport -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minium-scale=1.0">
+	<!-- Pagination Materialize -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet" >
+	<!-- FIN Pagination Materialize -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/img/airbnb.png" />
 	<link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
 </head>
 <body>
-
+	<!-- Inicio Navbar -->
+	<nav>
+	    <div class="nav-wrapper mac_contenedorNav">
+	    	<div class="row">
+	    		<div class="col m1 l1">
+	    			<a href="#" class="brand-logo"><img src="assets/img/airbnbPeque.png" class="mac_cajaLogo"></a>
+	    		</div>
+		    	<div class="col m5 l5">
+		    		<form>
+		    			<div class="input-field">
+		    				<input id="search" type="text" required> <!-- id del DESTINO (search) -->
+		    				<label class="label-icon" for="search"><i class="material-icons ">search</i></label>
+		    			</div>
+		    		</form>
+		    	</div>
+		      	<div class="col m6 l6">
+		      		<ul id="nav-mobile" class="right hide-on-med-and-down">
+			        	<li><a href="#">Conviertete en anfitrión</a></li>
+			        	<li><a href="#">Ayuda</a></li>
+			        	<li><a href="#">Regístrate</a></li>
+			        	<li><a href="#">Iniciar sesión</a></li>
+		     		</ul>
+		      	</div> 
+	      	</div>	
+	    </div>
+	</nav>
+	<!-- Fin Navbar -->
+	<!-- Inicio Mapa -->
+	<section class="mapa">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col m4 l4">
+					
+				</div>
+				<div class="col m8 l8">
+					<!-- MAPA -->
+					<div id="map"></div>
+					<!-- Mapa -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Fin Mapa -->
+	<!-- Inicio Footer -->
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col l12 m12 left">
+		    		<h6>1 - 18 de Más de 300 alquileres</h6>
+		    	</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+		    	<div class="col m12 l12">
+			    	<div id="pagination">
+			    		<ul class="pagination">
+						    <li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+						    <li class="active"><a href="#">1</a></li>
+						    <li class="waves-effect"><a href="#">2</a></li>
+						    <li class="waves-effect"><a href="#">3</a></li>
+						    <li class="waves-effect"><a href="#">4</a></li>
+						    <li class="waves-effect"><a href="#">5</a></li>
+						    <li class="waves-effect"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+						</ul>
+			    	</div>
+		    	</div>
+		    </div>
+		</div> 
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col m12 l12">
+					<hr class="mac_hr">
+				</div>
+			</div>	
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col m12 l12 mac_movDerecha">
+					<h6>Estados Unidos > California > San Francisco</h6>
+				</div>
+			</div>	
+		</div>
+	</footer>
+	<!-- Fin Footer -->
+	<!-- GEOLOCALITATION AIzaSyBMnuVYJyoPs1ueC9vwDC5TjXoYu08puC0 -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMnuVYJyoPs1ueC9vwDC5TjXoYu08puC0&callback=initMap&libraries=places"></script>
+	<!-- Pagination Materialize -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="materialize-pagination.min.js"></script>
+	<!-- FIN Pagination Materialize -->
+	<script src="assets/js/main.js"></script>
 	<script src="dist/js/script.js"></script>
 	<script type="text/javascript" src="assets/js/data.js"></script>
     <script src="https://use.fontawesome.com/046c2163eb.js"></script>
