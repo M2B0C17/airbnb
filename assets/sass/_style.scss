@@ -256,21 +256,18 @@ footer{
 }
 
 //tarjetas - cards----------
-.val_tarjeta_cajaprecios{
-	
-   margin: 10px;
-   width: 50px;
-   height: 50px;
-   background:  rgba(0,0,0,.5);
-   border: 1px solid #000;
-   transition: all 1s ease;
+.card .card-image .card-title{
+   
+   background-color:rgba(0,0,0,.4);
+ 	position: absolute;
+ 	top: 8em;
 }
-   .val_tarjeta__cajaprecios:hover{
-      width: 59px;
-      transition: all 2s ease;
-    }
 
+.card .card-image .card-title:hover{
+   background-color:rgba(255,0,0,.5) #FFF;
+ 
 
+}
 
 //lo de arriba es una transicion pero no funciono revisar
 
@@ -288,12 +285,12 @@ footer{
 
 .val_tarjeta__contenido__title{
 	font-weight: bold;
-	color: #7BBFEA;
+	color: #7BBFEA !important;
 }
 
 .val_tarjeta__contenido__text{
-	color: #7BBFEA;
-	font-size: 12px;
+	color: #7BBFEA !important;
+	font-size: 10px;
 }
 
 .val_tarjeta__estrellas{
