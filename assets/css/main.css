@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+main {
+  flex: 1 0 auto; }
+/* Inicio NAVBAR */
+nav {
+  background-color: whitesmoke; }
+  nav .mac_contenedorNav {
+    margin-left: 5%;
+    margin-right: 5%; }
+  nav .mac_cajaLogo {
+    background-color: whitesmoke;
+    padding: 17px;
+    border: none;
+    border-right: 2px solid #cfcfcf; }
+  nav input {
+    width: 100%; }
+
+nav .input-field label i {
+  color: black;
+  -webkit-transition: color .3s;
+  transition: color .3s; }
+
+nav, nav a, nav ul a, span.badge.new {
+  color: #000000;
+  font-size: 15px; }
+
+/* Fin NAVBAR */
+/* Inicio MAPA */
+.mapa #map {
+  height: 100%;
+  width: 100%; }
+
+/* Fin MAPA */
+/* Inicio FOOTER */
+footer .mac_hr {
+  width: 95%; }
+footer .page-footer, footer .pagination li.active {
+  background-color: whitesmoke; }
+footer .pagination li a {
+  color: #6ea9ad;
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 0 10px;
+  line-height: 30px; }
+footer .pagination li.active a {
+  color: #000; }
+footer h6 {
+  font-size: 1rem;
+  margin: .5rem 0 .4rem;
+  margin-left: 34px;
+  color: #a9a8a7; }
+
+/* Fin FOOTER */
