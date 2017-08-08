@@ -1,403 +1,388 @@
-ml>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Airbnb</title>
-	<!-- Viewport -->
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minium-scale=1.0">
-	<!-- Pagination Materialize -->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!-- FIN Pagination Materialize -->
+  <title>Airbnb</title>
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minium-scale=1.0">
+  <!-- Pagination Materialize -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- FIN Pagination Materialize -->
     <link rel="icon" type="image/png" href="assets/img/airbnb.png" />
-	<link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
 </head>
 <body>
   <!-- Inicio Navbar -->
   <nav>
-	    <div class="nav-wrapper mac_contenedorNav">
-	    	<div class="row">
-	    		<div class="col m1 l1">
-	    			<a href="#" class="brand-logo"><img src="assets/img/airbnbPeque.png" class="mac_cajaLogo"></a>
-	    		</div>
-		    	<div class="col m5 l5">
-		    		<form>
-		    			<div class="input-field">
-		    				<input id="search" type="text" required> <!-- id del DESTINO (search) -->
-		    				<label class="label-icon" for="search"><i class="material-icons ">search</i></label>
-		    			</div>
-		    		</form>
-		    	</div>
-		      	<div class="col m6 l6">
-		      		<ul id="nav-mobile" class="right hide-on-med-and-down">
-			        	<li><a href="#">Conviertete en anfitrión</a></li>
-			        	<li><a href="#">Ayuda</a></li>
-			        	<li><a href="#">Regístrate</a></li>
-			        	<li><a href="#">Iniciar sesión</a></li>
-		     		</ul>
-		      	</div> 
-	      	</div>	
-	    </div>
-	</nav>
-	<!-- Fin Navbar -->
-<!--INICIO Sección confirmar datos-->
-  	<!-- Inicio Mapa -->
-	<section class="mapa">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col m4 l4">
-					
-				</div>
-				<div class="col m8 l8">
-					<!-- MAPA -->
-					<div id="map"></div>
-					<!-- Mapa -->
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Fin Mapa -->
-	<div class="cam_section__contenedor contenedor">
-		<div class="row">
-			<div class="col l2 m2">
-				<h6>Fechas</h6>
-			</div>
-			<div class="col l2 m2">
-				<input type="text" name="llegada" placeholder="01/01/2018">
-			</div>
-			<div class="col l2 m2">
-				<input type="text" name="salida" placeholder="01/02/2018">
-			</div>
-			<div class="input-field col l2 m2">
-      			<select class="validate">
-			        <option value="" disabled selected>Choose your option</option>
-			        <option value="1">Option 1</option>
-			        <option value="2">Option 2</option>
-			        <option value="3">Option 3</option>
-      			</select>
-    		</div>
-		</div>
-		<div class="row">
-			<div class="col l2 m2">
-				<h6>Tipos de <br>habitaciones<span><i class="fa fa-question-circle" aria-hidden="true"></i></span></h6>
-			</div>
-			<div class="col l2 m2">
-				<h6>
-					<span><i class="fa fa-home" aria-hidden="true"></i></span> 
-					Casa entera 
-					<input type="checkbox" id="test5"/>
-				</h6>
-			</div>
-			<div class="col l2 m2">
-				<h6>
-					<span><i class="fa fa-user" aria-hidden="true"></i></span> 
-					Habitación<br>privada 
-					<input type="checkbox" id="test5"/>
-				</h6>
-			</div>
-			<div class="col l2 m2">
-				<h6>
-					<span><i class="fa fa-users" aria-hidden="true"></i></span> 
-					Habitación<br>compartida 
-					<input type="checkbox" id="test5"/>
-				</h6>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col l2 m2">
-				<h6>Rango de<br>precios</h6>
-			</div>
-			<div class="col l8 m8">
-				<div id="test-slider"></div>
-			</div>
-		</div>
-
-		<!--Filtro Vane-->
-		<div class="row">
-			<div class="col l12 m12 s12 vane_filtro">
-				<ul class="collapsible" data-collapsible="accordion">
-  					<li>
-    					<div class="collapsible-header">
-    						<span class="btn">Filtros</span>
-    						<div class="van">
-    							<p><strong>Solo hay un 14% de alojamientos disponibles para estas fechas</strong><br>
-    							Te recomendamos que reserves un alojamiento lo antes posible.</p>
-    						</div><br><br>
-    						<i class="fa fa-calendar" aria-hidden="true"></i>
-    					</div>
-
-    					<div class="collapsible-body">
-    						<div class="van2">
-    							<p>Tama;o</p>
-    							<div class="input-field col s12">
-    								<select>
-      									<option value="" disabled selected>Habitaciones</option>
-     									<option value="1">1</option>
-      									<option value="2">2</option>
-      									<option value="3">3</option>
-      									<option value="4">4 o mas</option>
-    								</select>
-   								 	<label>Materialize Select</label>
- 								</div>
- 								<div class="input-field col s12">
-    								<select>
-      									<option value="" disabled selected>Ba;os</option>
-     									<option value="1">1</option>
-      									<option value="2">2</option>
-      									<option value="3">3 o mas</option>
-    								</select>
-   								 	<label>Materialize Select</label>
- 								</div>
- 								<div class="input-field col s12">
-    								<select>
-      									<option value="" disabled selected>Camas</option>
-     									<option value="1">1</option>
-      									<option value="2">2</option>
-      									<option value="3">3</option>
-      									<option value="4">4 o mas</option>
-    								</select>
-   								 	<label>Materialize Select</label>
- 								</div>
-    						</div>
-							
-							<hr>
-    						<div class="van3">
-    							<p>Opciones</p>
-    							<form action="#">
-    								<p>
-      									<input type="checkbox" id="test5" />
-      									<label for="test5">Superhost<br>Quedate en casa de<br>anfitriones excepcionales<br>Mas informacion</label>
-    								</p>
-    							</form>
-    						</div>
-
-    						<hr>
-    						<div class="van4">
-    							<p>Servicios</p>
-    							<form action="#">
-    								<p>
-      									<input type="checkbox" id="test5" />
-      									<label for="test5">Internet inalambrico<br>(Wifi)</label>
-    								</p>
-    							</form>
-    							<form action="#">
-    								<p>
-      									<input type="checkbox" id="test5" />
-      									<label for="test5">TV</label>
-    								</p>
-    							</form>
-    							<form action="#">
-    								<p>
-      									<input type="checkbox" id="test5" />
-      									<label for="test5">Cocina<i class="fa fa-caret-down" aria-hidden="true"></i></label>
-    								</p>
-    							</form>
-    						</div>
-
-    						<hr>
-    						<div class="van5">
-    							<p>Servicios</p>
-    							<form action="#">
-    								<p>
-      									<input type="checkbox" id="test5" />
-      									<label for="test5">Edificio con ascensor</label>
-    								</p>
-    							</form>
-    							<form action="#">
-    								<p>
-      									<input type="checkbox" id="test5" />
-      									<label for="test5">Gimnacio</label>
-    								</p>
-    							</form>
-    							<form action="#">
-    								<p>
-      									<input type="checkbox" id="test5" />
-      									<label for="test5">Parking gratuito<br>incluido<i class="fa fa-caret-down" aria-hidden="true"></i></label>
-    								</p>
-    							</form>
-    						</div>
-
-    						<hr>
-    						<div class="van6">
-    							<p>Normas de la<br>casa</p>
-    							<form action="#">
-    								<p>
-      									<input type="checkbox" id="test5" />
-      									<label for="test5">Admite mascotas</label>
-    								</p>
-    							</form>
-    							<form action="#">
-    								<p>
-      									<input type="checkbox" id="test5" />
-      									<label for="test5">Apto para eventos</label>
-    								</p>
-    							</form>
-    							<form action="#">
-    								<p>
-      									<input type="checkbox" id="test5" />
-      									<label for="test5">Apto para fumadores</label>
-    								</p>
-    							</form>
-    						</div>
-
-    						<hr>
-    						<div class="van7">
-    							<p>Vecindarios</p>
-    							<form action="#">
-    								<p>
-      									<input type="checkbox" id="test5" />
-      									<label for="test5">SoMa</label>
-    								</p>
-    							</form>
-    							<form action="#">
-    								<p>
-      									<input type="checkbox" id="test5" />
-      									<label for="test5">Mission District</label>
-    								</p>
-    							</form>
-    							<form action="#">
-    								<p>
-      									<input type="checkbox" id="test5" />
-      									<label for="test5">Daly City<i class="fa fa-caret-down" aria-hidden="true"></i></label>
-    								</p>
-    							</form>
-    						</div>
-
-    						<a class="waves-effect waves-light btn-a">Cancelar</a>
-    						<a class="waves-effect waves-light btn-b">Aplicar filtros</a>
-    					</div>
-  					</li>  					
-				</ul>
-			</div>			
-		</div>
-	</div>
-<section class="val_filtros">
-<div class="contenedor">
-	<div class="row">
-		<div class="col m2 lg left">
-			<a class="val_filtros__btn waves-effect waves-teal btn-flat"><i class="fa fa-bolt" aria-hidden="true" style="color: #FAAE27;"></i>Reserva inmediatamente</a>
-		</div>
-;		<div class="col m8 l8">
-				<p class= "val_filtros__text center-align">Anuncios que no requieren que el usuario acepte la solicitud</p>
-		</div>
-		<div class="col m2 lg rigth">
-				<div class="switch center-align">
-   					<label>
-      					Off
-      				<input type="checkbox">
-      				<span class="lever"></span>
-     					 On
-    				</label>
-  				</div>
-				 <div class="divider"></div>  <!--Me hace una linea divisora-->
-				<!--Aqui termina primera parte boton de reserva, texto y el checkbox de off-->
-		</div>
-
-	</div>
-<div class="row">
-		<div class="col m4 l4 left">
-			<a class=" val_filtros__btn__dos waves-effect waves-teal btn-flat">filtros</a>
-		</div>
-			
-		<div class="col m4 l7 ">
-			<p class="val_filtros__parrafoUno right-align">Solo hay un 14% de alojamiento disponibles para estas fechas</p>
-			<p class="val_filtros_textdos right-align">te recomendamos que reserves un alojamiento lo antes posible</p>
-		</div>
-			<div class="col m1 l1 right">
-				<img class="val_filtros__img__flechas" src="assets/docs/flecha.jpg" alt="una imagen de una hoja con una flecha">
-			</div>
-	</div>
-</div><!--aqui termina el boton de filtros, texto e imagen de flecha-->
-
-<div class="row">
-	<div class="col m12 l12 left">
-		<i class="fa fa-info" aria-hidden="true"> Pueden aplicarse tarifas e impuestos adicionales </i>
-	
-	</div>
-</div> <!--aqui termina texto de informacion-->
-<div class="row"> <!--estas clases vienen predefinidas por el mismo frameworks-->
-        <div class="col m6 l6 left">
-          <div class="val_tarjeta card">
-            <div class="card-image">
-              <img class="val_tarjeta__imguno" src="assets/img/5.jpg">
-              <div class="val_tarjeta__cajaprecios"><span class="card-title">Caja con el precio</span></div>
+      <div class="nav-wrapper mac_contenedorNav">
+        <div class="row">
+          <div class="col m1 l1">
+            <a href="#" class="brand-logo"><img src="assets/img/airbnbPeque.png" class="mac_cajaLogo"></a>
+          </div>
+          <div class="col m5 l5">
+            <form>
+              <div class="input-field">
+                <input id="search" type="text" required> <!-- id del DESTINO (search) -->
+                <label class="label-icon" for="search"><i class="material-icons ">search</i></label>
+              </div>
+            </form>
+          </div>
+            <div class="col m6 l6">
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#">Conviertete en anfitrión</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Regístrate</a></li>
+                <li><a href="#">Iniciar sesión</a></li>
+            </ul>
+            </div> 
+          </div>  
+      </div>
+  </nav>
+  <!-- Fin Navbar -->
+  <section class="comprobar">
+    <div class="row">
+      <div class="col m10 l10">
+        <div class="cam_section__contenedor contenedor">
+          <div class="row">
+            <div class="col l2 m2">
+              <h6>Fechas</h6>
             </div>
-            <div class="val_tarjeta__contenido card-content">
-              <p class="val_tarjeta__contenido__title">City retrest amidst the forest</p>
-              <img class="val_tarjeta__contenido__img circle right" src="assets/img/perfiles/perfil1.jpg" alt="niña sentada en el pasto" width="100"> 
-              <p class="val_tarjeta__contenido__text">Casa/apto entero ° 3 huespedes <img class="val_tarjeta__estrellas" src="assets/docs/estrellas4de5.jpg" alt="estrellas iconos"> ° 11 eval</p>
+            <div class="col l2 m2">
+              <input type="text" name="llegada" placeholder="01/01/2018">
             </div>
-            <div class="card-action">
+            <div class="col l2 m2">
+              <input type="text" name="salida" placeholder="01/02/2018">
+            </div>
+            <div class="input-field col l2 m2">
+                  <select class="validate">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col l2 m2">
+              <h6>Tipos de <br>habitaciones<span><i class="fa fa-question-circle" aria-hidden="true"></i></span></h6>
+            </div>
+            <div class="col l2 m2">
+              <h6>
+                <span><i class="fa fa-home" aria-hidden="true"></i></span> 
+                Casa entera 
+                <input type="checkbox" id="test5"/>
+              </h6>
+            </div>
+            <div class="col l2 m2">
+              <h6>
+                <span><i class="fa fa-user" aria-hidden="true"></i></span> 
+                Habitación<br>privada 
+                <input type="checkbox" id="test5"/>
+              </h6>
+            </div>
+            <div class="col l2 m2">
+              <h6>
+                <span><i class="fa fa-users" aria-hidden="true"></i></span> 
+                Habitación<br>compartida 
+                <input type="checkbox" id="test5"/>
+              </h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col l2 m2">
+              <h6>Rango de<br>precios</h6>
+            </div>
+            <div class="col l8 m8">
+              <div id="test-slider"></div>
+            </div>
+          </div>
+        </div>
+        <div class="val_filtros">
+          <div class="contenedor">
+            <div class="row">
+              <div class="col m2 lg left">
+                <a class="val_filtros__btn waves-effect waves-teal btn-flat"><i class="fa fa-bolt" aria-hidden="true" style="color: #FAAE27;"></i>Reserva inmediatamente</a>
+              </div>
+              <div class="col m8 l8">
+                  <p class= "val_filtros__text center-align">Anuncios que no requieren que el usuario acepte la solicitud</p>
+              </div>
+              <div class="col m2 lg rigth">
+                  <div class="switch center-align">
+                    <label>
+                      Off
+                      <input type="checkbox">
+                      <span class="lever"></span>
+                     On
+                    </label>
+                  </div>
+                  <div class="divider"></div>  <!--Me hace una linea divisora-->
+                  <!--Aqui termina primera parte boton de reserva, texto y el checkbox de off-->
+              </div>
+            </div>
+
+            <!--Filtro vane-->
+            <div class="row">
+             <div class="col l12 m12 s12 vane_filtro">
+              <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                  <div class="collapsible-header">
+                    <span class="btn">Filtros</span>
+                    <div class="van">
+                      <p><strong>Solo hay un 14% de alojamientos disponibles para estas fechas</strong><br>
+                      Te recomendamos que reserves un alojamiento lo antes posible.</p>
+                    </div><br><br>
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                  </div>
+                  <div class="collapsible-body">
+                    <div class="van2">
+                      <p>Tama;o</p>
+                      <div class="input-field col s12">
+                        <select>
+                            <option value="" disabled selected>Habitaciones</option>
+                          <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4 o mas</option>
+                        </select>
+                        <label>Materialize Select</label>
+                      </div>
+                      <div class="input-field col s12">
+                        <select>
+                            <option value="" disabled selected>Baños</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3 o mas</option>
+                        </select>
+                        <label>Materialize Select</label>
+                      </div>
+                      <div class="input-field col s12">
+                        <select>
+                            <option value="" disabled selected>Camas</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4 o mas</option>
+                        </select>
+                        <label>Materialize Select</label>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="van3">
+                      <p>Opciones</p>
+                      <form action="#">
+                        <p>
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">Superhost<br>Quedate en casa de<br>anfitriones excepcionales<br>Mas informacion</label>
+                        </p>
+                      </form>
+                    </div>
+                    <hr>
+                    <div class="van4">
+                      <p>Servicios</p>
+                      <form action="#">
+                        <p>
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">Internet inalambrico<br>(Wifi)</label>
+                        </p>
+                      </form>
+                      <form action="#">
+                        <p>
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">TV</label>
+                        </p>
+                      </form>
+                      <form action="#">
+                        <p>
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">Cocina<i class="fa fa-caret-down" aria-hidden="true"></i></label>
+                        </p>
+                      </form>
+                    </div>
+                    <hr>
+                    <div class="van5">
+                      <p>Servicios</p>
+                      <form action="#">
+                        <p>
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">Edificio con ascensor</label>
+                        </p>
+                      </form>
+                      <form action="#">
+                        <p>
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">Gimnacio</label>
+                        </p>
+                      </form>
+                      <form action="#">
+                        <p>
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">Parking gratuito<br>incluido<i class="fa fa-caret-down" aria-hidden="true"></i></label>
+                        </p>
+                      </form>
+                    </div>
+                    <hr>
+                    <div class="van6">
+                      <p>Normas de la<br>casa</p>
+                      <form action="#">
+                        <p>
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">Admite mascotas</label>
+                        </p>
+                      </form>
+                      <form action="#">
+                        <p>
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">Apto para eventos</label>
+                        </p>
+                      </form>
+                      <form action="#">
+                        <p>
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">Apto para fumadores</label>
+                        </p>
+                      </form>
+                    </div>
+                    <hr>
+                    <div class="van7">
+                      <p>Vecindarios</p>
+                      <form action="#">
+                        <p>
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">SoMa</label>
+                        </p>
+                      </form>
+                      <form action="#">
+                        <p>
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">Mission District</label>
+                        </p>
+                      </form>
+                      <form action="#">
+                        <p>
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">Daly City<i class="fa fa-caret-down" aria-hidden="true"></i></label>
+                        </p>
+                      </form>
+                    </div>
+                    <a class="waves-effect waves-light btn-a">Cancelar</a>
+                    <a class="waves-effect waves-light btn-b">Aplicar filtros</a>
+                  </div>
+                </li>           
+              </ul>
+            </div>      
+          </div>
+          <!--Fin Vane Filto-->
+          <div class="row">
+            <div class="col m12 l12 left">
+              <i class="fa fa-info" aria-hidden="true"> Pueden aplicarse tarifas e impuestos adicionales </i>
             
             </div>
+          </div> <!--aqui termina texto de informacion-->
+          <div class="row"> <!--estas clases vienen predefinidas por el mismo frameworks-->
+                <div class="col m6 l6 left">
+                    <div class="val_tarjeta card">
+                      <div class="card-image">
+                          <img class="val_tarjeta__imguno" src="assets/img/5.jpg">
+                          <div class="val_tarjeta__cajaprecios"><span class="card-title">Caja con el precio</span></div>
+                      </div>
+                      <div class="val_tarjeta__contenido card-content">
+                          <p class="val_tarjeta__contenido__title">City retrest amidst the forest</p>
+                          <img class="val_tarjeta__contenido__img circle right" src="assets/img/perfiles/perfil1.jpg" alt="niña sentada en el pasto" width="100"> 
+                          <p class="val_tarjeta__contenido__text">Casa/apto entero ° 3 huespedes <img class="val_tarjeta__estrellas" src="assets/docs/estrellas4de5.jpg" alt="estrellas iconos"> ° 11 eval</p>
+                      </div>
+                      <div class="card-action">
+                      
+                      </div>
+                    </div>
+                </div>
+                <!--aqui termina la primera card con la imagen-->
+            <div class="col m6 l6 rigth">
+                    <div class="card">
+                      <div class="card-image">
+                          <img class="val_tarjeta__imgdos" src="assets/img/4.jpg">
+                          <span class="card-title">caja con el precio</span>
+                      </div>
+                      <div class="val_tarjeta__contenido card-content">
+                          <p class="val_tarjeta__contenido__title">bright and Cheerful 1BR by GGps...</p>
+                          <img class="val_tarjeta__contenido__img circle right" src="assets/img/perfiles/perfil2.jpg" alt="pareja" width="100"> 
+                          <p class="val_tarjeta__contenido__text"><i class="fa fa-home" aria-hidden="true" style="color: #489FDF"></i>°Casa/apto entero°2 huespedes <img class="val_tarjeta__estrellas" src="assets/docs/estrellas5.jpg" alt="estrellas iconos">.23</p>
+                      </div>
+                      <div class="card-action"></div>
+                    </div>
+                </div>
+                <!--aqui termina la segunda card, con la imagen-->
+              </div>
           </div>
-        </div>
-      <!--aqui termina la primera card con la imagen-->
-		<div class="col m6 l6 rigth">
-          <div class="card">
-            <div class="card-image">
-              <img class="val_tarjeta__imgdos" src="assets/img/4.jpg">
-              <span class="card-title">caja con el precio</span>
-            </div>
-            <div class="val_tarjeta__contenido card-content">
-              <p class="val_tarjeta__contenido__title">bright and Cheerful 1BR by GGps...</p>
-              <img class="val_tarjeta__contenido__img circle right" src="assets/img/perfiles/perfil2.jpg" alt="pareja" width="100"> 
-              <p class="val_tarjeta__contenido__text"><i class="fa fa-home" aria-hidden="true" style="color: #489FDF"></i>°Casa/apto entero°2 huespedes <img class="val_tarjeta__estrellas" src="assets/docs/estrellas5.jpg" alt="estrellas iconos">.23</p>
-            </div>
-            <div class="card-action">
-            </div>
-          </div>
-        </div>
-        <!--aqui termina la segunda card, con la imagen-->
       </div>
+      <div class="col m2 l2">
+        <!-- Inicio Mapa -->
+        <div class="mapa">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col m4 l4">
+                
+              </div>
+              <div class="col m8 l8">
+                <!-- MAPA -->
+                <div id="map"></div>
+                <!-- Mapa -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fin Mapa -->
+      </div>
+    </div>
+  </section>
   <!-- Inicio Footer -->
-	<footer>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col l12 m12 left">
-		    		<h6>1 - 18 de Más de 300 alquileres</h6>
-		    	</div>
-			</div>
-		</div>
-		<div class="container-fluid">
-			<div class="row">
-		    	<div class="col m12 l12">
-			    	<div id="pagination">
-			    		<ul class="pagination">
-						    <li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
-						    <li class="active"><a href="#">1</a></li>
-						    <li class="waves-effect"><a href="#">2</a></li>
-						    <li class="waves-effect"><a href="#">3</a></li>
-						    <li class="waves-effect"><a href="#">4</a></li>
-						    <li class="waves-effect"><a href="#">5</a></li>
-						    <li class="waves-effect"><a href="#"><i class="material-icons">chevron_right</i></a></li>
-						</ul>
-			    	</div>
-		    	</div>
-		    </div>
-		</div> 
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col m12 l12">
-					<hr class="mac_hr">
-				</div>
-			</div>	
-		</div>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col m12 l12 mac_movDerecha">
-					<h6>Estados Unidos > California > San Francisco</h6>
-				</div>
-			</div>	
-		</div>
-	</footer>
-	<!-- Fin Footer -->
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col l12 m12 left">
+            <h6>1 - 18 de Más de 300 alquileres</h6>
+          </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col m12 l12">
+            <div id="pagination">
+              <ul class="pagination">
+                <li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li class="waves-effect"><a href="#">2</a></li>
+                <li class="waves-effect"><a href="#">3</a></li>
+                <li class="waves-effect"><a href="#">4</a></li>
+                <li class="waves-effect"><a href="#">5</a></li>
+                <li class="waves-effect"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+    </div> 
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col m12 l12">
+          <hr class="mac_hr">
+        </div>
+      </div>  
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col m12 l12 mac_movDerecha">
+          <h6>Estados Unidos > California > San Francisco</h6>
+        </div>
+      </div>  
+    </div>
+  </footer>
+  <!-- Fin Footer -->
              
-	<script src="dist/js/script.js"></script>
-	<script type="text/javascript" src="assets/js/data.js"></script>
+  <script src="dist/js/script.js"></script>
+  <script type="text/javascript" src="assets/js/data.js"></script>
   <script src="https://use.fontawesome.com/046c2163eb.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
   <!-- GEOLOCALITATION AIzaSyBMnuVYJyoPs1ueC9vwDC5TjXoYu08puC0 -->
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMnuVYJyoPs1ueC9vwDC5TjXoYu08puC0&callback=initMap&libraries=places"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMnuVYJyoPs1ueC9vwDC5TjXoYu08puC0&callback=initMap&libraries=places"></script>
 </body>
 </html>

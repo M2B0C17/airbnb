@@ -8,6 +8,18 @@ $(document).ready(function(){
 	    to: 5,
 	    values: [0, 10, 100, 1000, 10000, 100000, 1000000]
 	});
+
+	/* Pagination */
+   $('#pagination').materializePagination({
+	    align: 'left',
+	    lastPage:  5,
+	    firstPage:  1,
+	    urlParameter: 'page',
+	    useUrlParameter: true,
+	    onClickCallback: function(requestedPage){
+	        console.log('Requested page is '+ requestedPage);
+	    }
+	});
 });
 	/* Geolocalización */
 	function initMap(){
@@ -74,17 +86,7 @@ $(document).ready(function(){
 	/* FIN Geolocalización */
 
 
-	/* Pagination */
-   $('#pagination').materializePagination({
-	    align: 'left',
-	    lastPage:  5,
-	    firstPage:  1,
-	    urlParameter: 'page',
-	    useUrlParameter: true,
-	    onClickCallback: function(requestedPage){
-	        console.log('Requested page is '+ requestedPage);
-	    }
-	}); 
+	 
 
 
 
