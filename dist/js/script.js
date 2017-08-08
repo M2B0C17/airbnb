@@ -10252,86 +10252,6 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-var datos = [
-{"id":1,
-"precio": 22000,,
-"image_url":"1.jpg",
-"calificacion":3},
-{"id":2,
-"precio": 22000,,
-"image_url":"2.jpg",
-"calificacion":3},
-{"id":3,
-"precio": 22000,,
-"image_url":"3.png",
-"calificacion":3},
-{"id":4,
-"precio": 22000,,
-"image_url":"4.jpg",
-"calificacion":3},
-{"id":5,
-"precio": 22000,,
-"image_url":"5.jpg",
-"calificacion":3},
-{"id":6,
-"precio": 22000,,
-"image_url":"6.jpg",
-"calificacion":3},
-{"id":7,
-"precio": 22000,,
-"image_url":"7.jpg",
-"calificacion":3},
-{"id":8,
-"precio": 22000,,
-"image_url":"8.jpg",
-"calificacion":3},
-{"id":9,
-"precio": 22000,,
-"image_url":"9.jpg",
-"calificacion":3},
-{"id":10,
-"precio": 22000,,
-"image_url":"10.jpg",
-"calificacion":3},
-{"id":11,
-"precio": 22000,,
-"image_url":"11.jpg",
-"calificacion":3},
-{"id":12,
-"precio": 22000,,
-"image_url":"12.jpg",
-"calificacion":3},
-{"id":13,
-"precio": 22000,,
-"image_url":"13.jpg",
-"calificacion":3},
-{"id":14,
-"precio": 22000,,
-"image_url":"14.jpg",
-"calificacion":3},
-{"id":15,
-"precio": 22000,,
-"image_url":"15.jpg",
-"calificacion":3},
-{"id":16,
-"precio": 22000,,
-"image_url":"16.jpg",
-"calificacion":3},
-{"id":17,
-"precio": 22000,,
-"image_url":"17.jpg",
-"calificacion":3},
-{"id":18,
-"precio": 22000,,
-"image_url":"18.jpg",
-"calificacion":3},
-{"id":19,
-"precio": 22000,,
-"image_url":"19.jpg",
-"calificacion":3},
-{"id":20,
-"precio": 22000,,
-=======
 "precio": 22000,
 "image_url":"1.jpg",
 "calificacion":3},
@@ -10412,10 +10332,29 @@ var datos = [
 "image_url":"20.JPG",
 "calificacion":3},
 ]
+$(document).ready(function(){
+	/* Pagination */
+   $('#pagination').materializePagination({
+	    align: 'left',
+	    lastPage:  5,
+	    firstPage:  1,
+	    urlParameter: 'page',
+	    useUrlParameter: true,
+	    onClickCallback: function(requestedPage){
+	        console.log('Requested page is '+ requestedPage);
+	    }
+	}); 
 
-
-$(document).ready(function() {
-	$('select').material_select();
+   /* Geolocalización */
+	var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+  
+  $('select').material_select();
 	 var slider = document.getElementById('test-slider');
   noUiSlider.create(slider, {
    start: [20, 80],
@@ -10430,5 +10369,78 @@ $(document).ready(function() {
      decimals: 0
    })
   });
+
 });
+
+
+
+	
+
+	/*
+	function initMap(){
+	  var map = new google.maps.Map(document.getElementById('map'), {
+	    zoom: 7,
+	    center: {lat: -9.1191427, lng: -77.0349046}, // muestra ubicacion inicial en stgo --> center: {lat: -33.4569400, lng: -70.6482700},
+	    disableDefaultUI: true // quita el zoom y las vistas por defecto del mapa
+	  });
+
+	  directionsDisplay.setMap(map);
+
+Dentro de la función initMap(), agregamos la funcion buscar()
+			*.getCurrentPosition -> permite al usuario obtener su ubicación actual, el parámetro funcionExito,
+			se ejecuta solo cuando el usuario comparte su ubicación, mientras que funcionError se ejecuta
+			cuando se produce un error en la geolocalización.
+			Pregunta si quieres activar geolocalizacion.
+
+
+		function buscar(){
+			if(navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(funcionExito, funcionError);
+			}
+		}
+		var latitud,longitud;
+
+		/*Agregaremos las variables funcionExito, con el que obtendremos nuestra latitud
+		o longituf y además crearemos un marcador de nuestra ubicación
+
+		var funcionExito = function(posicion){
+			latitud = posicion.coords.latitude;
+			longitud = posicion.coords.longitude;
+
+		/*Aumentaremos la profundidad de visualización de nuestro mapa con map.setZoom y le asignaremos
+		un nuevo centro con map.setCenter.
+		También añadimos funcionError con un mensaje para el usuario, en caso de que nuestra geolocalización
+		falle.
+
+			map.setZoom(17);
+			map.setCenter({lat: latitud,lng: longitud}); // centra el mapa en la ubicacion
+
+		// Función que coloca un marcador
+		var miUbicacion = new google.maps.Marker({
+			position: {lat: latitud, lng:longitud},
+			animation: google.maps.Animation.BOUNCE, // .BOUNCE para que salte el monito .DROP para que deje de saltar
+			map: map,
+		});
+
+		}
+
+		// se ejecuta esta funcion si no escuentra la ubicacion
+		var funcionError = function (error){
+			error(true,map.getCenter());
+			alert("Tenemos un problema con encontrar tu ubicación");
+		}
+		buscar(); // Esto es lo que permite que al cargar la pagina la funcion buscar se ejecute y pregunte lo de la ubicacion
+
+	  /* Autocomplete 
+	  var final = (document.getElementById('destino'));
+	  var autocomplete = new google.maps.places.Autocomplete(final);
+	  autocomplete.bindTo('bounds', map);
+
+	}
+
+	*/
+
+	/* FIN Geolocalización */
+
+
 
