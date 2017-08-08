@@ -1,3 +1,10 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+main {
+  flex: 1 0 auto; }
 /* Inicio NAVBAR */
 nav {
   background-color: whitesmoke; }
@@ -48,5 +55,3 @@ footer h6 {
   color: #a9a8a7; }
 
 /* Fin FOOTER */
-
-/*# sourceMappingURL=main.css.map */
