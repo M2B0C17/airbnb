@@ -20359,6 +20359,31 @@ $(document).ready(function(){
 	    }
 	});
 });
+
+   /*Rango de precios*/	 
+$(function(){
+  $('#rango').ionRangeSlider({
+    type: "double",
+    min: 1000,
+    max: 2000,
+    from: 1200,
+    to: 1800,
+    hide_min_max: true,
+    hide_from_to: false,
+    grid: false,
+  });
+
+  var valorUno = $('.irs-from').text();
+  var valorDos = $('.irs-to').text();
+
+  $('.cam_section__range-valor1').text(valorUno);
+  $('.cam_section__range-valor2').text(valorDos);
+
+});
+	
+
+
+
 	/* Geolocalización */
 	function initMap(){
 	  var map = new google.maps.Map(document.getElementById('map'), {
@@ -20422,11 +20447,5 @@ $(document).ready(function(){
 	}
 
 	/* FIN Geolocalización */
-
-
-	 
-
-
-
 
 

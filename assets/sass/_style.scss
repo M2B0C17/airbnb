@@ -1,4 +1,62 @@
-.collapsible{
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Inicio NAVBAR */
+nav{
+	background-color: whitesmoke;
+	.mac_contenedorNav{
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.mac_cajaLogo{
+		background-color: whitesmoke;
+		padding: 17px;
+		border: none;
+		border-right: 2px solid #cfcfcf;
+	}
+	input{
+		width: 100%;
+	}
+}
+
+nav .input-field label i {
+    color: black;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+}
+
+nav, nav a, nav ul a, span.badge.new {
+    color: #000000;
+    font-size: 15px;
+}
+/* Fin NAVBAR */
+
+/*inicio Div comprobar datos -> Camila */
+
+.cam_section__input{
+	border: 1px
+}
+.cam_section__range{
+	width:75%;
+	.cam_section__range-valores{
+		background-color:red;
+		width:25%;
+		margin-left:33%;
+		.cam_section__range-valores-entre{
+			text-align: center;
+		}
+	}
+}
+
+
+  .collapsible{
 	width: 100%;
 	height: auto;
 	.collapsible-header{
@@ -121,45 +179,7 @@
 	}
 }
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
 
-  main {
-    flex: 1 0 auto;
-  }
-
-/* Inicio NAVBAR */
-nav{
-	background-color: whitesmoke;
-	.mac_contenedorNav{
-		margin-left: 5%;
-		margin-right: 5%;
-	}
-	.mac_cajaLogo{
-		background-color: whitesmoke;
-		padding: 17px;
-		border: none;
-		border-right: 2px solid #cfcfcf;
-	}
-	input{
-		width: 100%;
-	}
-}
-
-nav .input-field label i {
-    color: black;
-    -webkit-transition: color .3s;
-    transition: color .3s;
-}
-
-nav, nav a, nav ul a, span.badge.new {
-    color: #000000;
-    font-size: 15px;
-}
-/* Fin NAVBAR */
 
 /* Inicio MAPA */
 .mapa{
@@ -279,6 +299,8 @@ footer{
 .val_tarjeta__estrellas{
 	weight: 70px;
 }
+
+
 
 
 
