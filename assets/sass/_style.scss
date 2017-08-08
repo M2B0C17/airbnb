@@ -1,3 +1,126 @@
+.collapsible{
+	width: 60%;
+	height: auto;
+	.collapsible-header{
+		display: inline-flex;
+		border-style: none;
+		.btn{
+			background-color: white;
+			color: black;
+			font-size: 10px;
+			margin-right: 200px;
+			border: 1px solid black;
+			border-radius: 5px;
+			padding: 5px;
+			width: auto;
+			margin-top: 0;
+		}
+		.van p{
+			font-size: 10px;
+			margin-right: 20px;
+		}	
+	}
+	ul:not(.browser-default){
+			border-style: none;
+		}
+	.collapsible-body{
+		.van2{
+			display: inline-flex;
+			p{
+				margin-right: 20%;
+			}
+			.select-wrapper input.select-dropdown {
+				border: 1px solid black;
+				text-align: center;
+			}
+		}
+		.van3{
+			display: inline-flex;
+			height: auto;
+			[type=checkbox]+label {
+    			height: auto;
+    			font-size: 10px;
+    			margin-left: 40%;    			
+			}
+		}
+		.van4{
+			display: inline-flex;
+			height: auto;
+			[type=checkbox]+label {
+    			height: auto;
+    			display: inline-flex; 
+    			font-size: 10px;
+    			margin-left: 40%;
+    			margin-right: 20%;
+    			p{
+    				margin-right: 30px;
+    			}  			
+			}
+		}
+		.van5{
+			display: inline-flex;
+			height: auto;
+			[type=checkbox]+label {
+    			height: auto;
+    			display: inline-flex; 
+    			font-size: 10px;
+    			margin-left: 40%;
+    			margin-right: 20%;
+    			p{
+    				margin-right: 20px;
+    			}  			
+			}
+		}
+		.van6{
+			display: inline-flex;
+			height: auto;
+			[type=checkbox]+label {
+    			height: auto;
+    			display: inline-flex; 
+    			font-size: 10px;
+    			margin-left: 40%;
+    			margin-right: 20%;
+    			p{
+    				margin-right: 20px;
+    			}  			
+			}
+		}
+		.van7{
+			display: inline-flex;
+			height: auto;
+			[type=checkbox]+label {
+    			height: auto;
+    			display: inline-flex; 
+    			font-size: 10px;
+    			margin-left: 40%;
+    			margin-right: 20%;
+    			p{
+    				margin-right: 20px;
+    			}  			
+			}
+		}
+	}
+	.btn-a{
+		margin-top: 20%;
+		background-color: white;
+		width: 150px;
+		border: 1px solid black;
+		border-radius: 1px solid black;
+		text-align: center;
+		color: black;
+		font-weight: bold;
+	}
+	.btn-b{
+		margin-top: 20%;
+		background-color: pink;
+		width: 150px;
+		border-radius: 1px solid pink;
+		text-align: center;
+		color: white;
+		font-weight: bold;
+	}
+}
+
 body {
     display: flex;
     min-height: 100vh;
@@ -156,5 +279,6 @@ footer{
 .val_tarjeta__estrellas{
 	weight: 70px;
 }
+
 
 

@@ -10332,7 +10332,17 @@ return jQuery;
 "image_url":"20.JPG",
 "calificacion":3},
 ]
+
+
 $(document).ready(function(){
+  $("#range_07").ionRangeSlider({
+	    type: "double",
+	    grid: true,
+	    from: 1,
+	    to: 5,
+	    values: [0, 10, 100, 1000, 10000, 100000, 1000000]
+	});
+  
 	/* Pagination */
    $('#pagination').materializePagination({
 	    align: 'left',
@@ -10441,7 +10451,4 @@ Dentro de la función initMap(), agregamos la funcion buscar()
 	*/
 
 	/* FIN Geolocalización */
-
-
-
 
