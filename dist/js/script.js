@@ -10252,88 +10252,85 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-var datos = [
-{"id":1,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"1.jpg",
 "calificacion":3},
 {"id":2,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"2.jpg",
 "calificacion":3},
 {"id":3,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"3.png",
 "calificacion":3},
 {"id":4,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"4.jpg",
 "calificacion":3},
 {"id":5,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"5.jpg",
 "calificacion":3},
 {"id":6,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"6.jpg",
 "calificacion":3},
 {"id":7,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"7.jpg",
 "calificacion":3},
 {"id":8,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"8.jpg",
 "calificacion":3},
 {"id":9,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"9.jpg",
 "calificacion":3},
 {"id":10,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"10.jpg",
 "calificacion":3},
 {"id":11,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"11.jpg",
 "calificacion":3},
 {"id":12,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"12.jpg",
 "calificacion":3},
 {"id":13,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"13.jpg",
 "calificacion":3},
 {"id":14,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"14.jpg",
 "calificacion":3},
 {"id":15,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"15.jpg",
 "calificacion":3},
 {"id":16,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"16.jpg",
 "calificacion":3},
 {"id":17,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"17.jpg",
 "calificacion":3},
 {"id":18,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"18.jpg",
 "calificacion":3},
 {"id":19,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"19.jpg",
 "calificacion":3},
 {"id":20,
-"precio": 22000,,
+"precio": 22000,
 "image_url":"20.JPG",
 "calificacion":3},
-
 ]
 $(document).ready(function(){
 	/* Pagination */
@@ -10356,6 +10353,22 @@ $(document).ready(function(){
           zoom: 8
         });
       }
+  
+  $('select').material_select();
+	 var slider = document.getElementById('test-slider');
+  noUiSlider.create(slider, {
+   start: [20, 80],
+   connect: true,
+   step: 1,
+   orientation: 'horizontal', // 'horizontal' or 'vertical'
+   range: {
+     'min': 0,
+     'max': 100
+   },
+   format: wNumb({
+     decimals: 0
+   })
+  });
 
 });
 
@@ -10428,3 +10441,6 @@ Dentro de la función initMap(), agregamos la funcion buscar()
 	*/
 
 	/* FIN Geolocalización */
+
+
+

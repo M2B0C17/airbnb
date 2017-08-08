@@ -8,15 +8,13 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minium-scale=1.0">
 	<!-- Pagination Materialize -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet" >
 	<!-- FIN Pagination Materialize -->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/img/airbnb.png" />
 	<link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
 </head>
 <body>
-	<!-- Inicio Navbar -->
-	<nav>
+  <!-- Inicio Navbar -->
+  <nav>
 	    <div class="nav-wrapper mac_contenedorNav">
 	    	<div class="row">
 	    		<div class="col m1 l1">
@@ -42,7 +40,8 @@
 	    </div>
 	</nav>
 	<!-- Fin Navbar -->
-	<!-- Inicio Mapa -->
+<!--INICIO Sección confirmar datos-->
+  	<!-- Inicio Mapa -->
 	<section class="mapa">
 		<div class="container-fluid">
 			<div class="row">
@@ -58,7 +57,141 @@
 		</div>
 	</section>
 	<!-- Fin Mapa -->
-	<!-- Inicio Footer -->
+	<div class="cam_section__contenedor contenedor">
+		<div class="row">
+			<div class="col l2 m2">
+				<h6>Fechas</h6>
+			</div>
+			<div class="col l2 m2">
+				<input type="text" name="llegada" placeholder="01/01/2018">
+			</div>
+			<div class="col l2 m2">
+				<input type="text" name="salida" placeholder="01/02/2018">
+			</div>
+			<div class="input-field col l2 m2">
+      			<select class="validate">
+			        <option value="" disabled selected>Choose your option</option>
+			        <option value="1">Option 1</option>
+			        <option value="2">Option 2</option>
+			        <option value="3">Option 3</option>
+      			</select>
+    		</div>
+		</div>
+		<div class="row">
+			<div class="col l2 m2">
+				<h6>Tipos de <br>habitaciones<span><i class="fa fa-question-circle" aria-hidden="true"></i></span></h6>
+			</div>
+			<div class="col l2 m2">
+				<h6>
+					<span><i class="fa fa-home" aria-hidden="true"></i></span> 
+					Casa entera 
+					<input type="checkbox" id="test5"/>
+				</h6>
+			</div>
+			<div class="col l2 m2">
+				<h6>
+					<span><i class="fa fa-user" aria-hidden="true"></i></span> 
+					Habitación<br>privada 
+					<input type="checkbox" id="test5"/>
+				</h6>
+			</div>
+			<div class="col l2 m2">
+				<h6>
+					<span><i class="fa fa-users" aria-hidden="true"></i></span> 
+					Habitación<br>compartida 
+					<input type="checkbox" id="test5"/>
+				</h6>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col l2 m2">
+				<h6>Rango de<br>precios</h6>
+			</div>
+			<div class="col l8 m8">
+				<div id="test-slider"></div>
+			</div>
+		</div>
+	</div>
+<section class="val_filtros">
+<div class="contenedor">
+	<div class="row">
+		<div class="col m2 lg left">
+			<a class="val_filtros__btn waves-effect waves-teal btn-flat"><i class="fa fa-bolt" aria-hidden="true" style="color: #FAAE27;"></i>Reserva inmediatamente</a>
+		</div>
+;		<div class="col m8 l8">
+				<p class= "val_filtros__text center-align">Anuncios que no requieren que el usuario acepte la solicitud</p>
+		</div>
+		<div class="col m2 lg rigth">
+				<div class="switch center-align">
+   					<label>
+      					Off
+      				<input type="checkbox">
+      				<span class="lever"></span>
+     					 On
+    				</label>
+  				</div>
+				 <div class="divider"></div>  <!--Me hace una linea divisora-->
+				<!--Aqui termina primera parte boton de reserva, texto y el checkbox de off-->
+		</div>
+
+	</div>
+<div class="row">
+		<div class="col m4 l4 left">
+			<a class=" val_filtros__btn__dos waves-effect waves-teal btn-flat">filtros</a>
+		</div>
+			
+		<div class="col m4 l7 ">
+			<p class="val_filtros__parrafoUno right-align">Solo hay un 14% de alojamiento disponibles para estas fechas</p>
+			<p class="val_filtros_textdos right-align">te recomendamos que reserves un alojamiento lo antes posible</p>
+		</div>
+			<div class="col m1 l1 right">
+				<img class="val_filtros__img__flechas" src="assets/docs/flecha.jpg" alt="una imagen de una hoja con una flecha">
+			</div>
+	</div>
+</div><!--aqui termina el boton de filtros, texto e imagen de flecha-->
+
+<div class="row">
+	<div class="col m12 l12 left">
+		<i class="fa fa-info" aria-hidden="true"> Pueden aplicarse tarifas e impuestos adicionales </i>
+	
+	</div>
+</div> <!--aqui termina texto de informacion-->
+<div class="row"> <!--estas clases vienen predefinidas por el mismo frameworks-->
+        <div class="col m6 l6 left">
+          <div class="val_tarjeta card">
+            <div class="card-image">
+              <img class="val_tarjeta__imguno" src="assets/img/5.jpg">
+              <div class="val_tarjeta__cajaprecios"><span class="card-title">Caja con el precio</span></div>
+            </div>
+            <div class="val_tarjeta__contenido card-content">
+              <p class="val_tarjeta__contenido__title">City retrest amidst the forest</p>
+              <img class="val_tarjeta__contenido__img circle right" src="assets/img/perfiles/perfil1.jpg" alt="niña sentada en el pasto" width="100"> 
+              <p class="val_tarjeta__contenido__text">Casa/apto entero ° 3 huespedes <img class="val_tarjeta__estrellas" src="assets/docs/estrellas4de5.jpg" alt="estrellas iconos"> ° 11 eval</p>
+            </div>
+            <div class="card-action">
+            
+            </div>
+          </div>
+        </div>
+      <!--aqui termina la primera card con la imagen-->
+		<div class="col m6 l6 rigth">
+          <div class="card">
+            <div class="card-image">
+              <img class="val_tarjeta__imgdos" src="assets/img/4.jpg">
+              <span class="card-title">caja con el precio</span>
+            </div>
+            <div class="val_tarjeta__contenido card-content">
+              <p class="val_tarjeta__contenido__title">bright and Cheerful 1BR by GGps...</p>
+              <img class="val_tarjeta__contenido__img circle right" src="assets/img/perfiles/perfil2.jpg" alt="pareja" width="100"> 
+              <p class="val_tarjeta__contenido__text"><i class="fa fa-home" aria-hidden="true" style="color: #489FDF"></i>°Casa/apto entero°2 huespedes <img class="val_tarjeta__estrellas" src="assets/docs/estrellas5.jpg" alt="estrellas iconos">.23</p>
+            </div>
+            <div class="card-action">
+            </div>
+          </div>
+        </div>
+        <!--aqui termina la segunda card, con la imagen-->
+      </div>
+  <!-- Inicio Footer -->
 	<footer>
 		<div class="container-fluid">
 			<div class="row">
@@ -100,15 +233,12 @@
 		</div>
 	</footer>
 	<!-- Fin Footer -->
-	<!-- GEOLOCALITATION AIzaSyBMnuVYJyoPs1ueC9vwDC5TjXoYu08puC0 -->
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMnuVYJyoPs1ueC9vwDC5TjXoYu08puC0&callback=initMap&libraries=places"></script>
-	<!-- Pagination Materialize -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<script src="materialize-pagination.min.js"></script>
-	<!-- FIN Pagination Materialize -->
-	<script src="assets/js/main.js"></script>
+             
 	<script src="dist/js/script.js"></script>
 	<script type="text/javascript" src="assets/js/data.js"></script>
-    <script src="https://use.fontawesome.com/046c2163eb.js"></script>
+  <script src="https://use.fontawesome.com/046c2163eb.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+  <!-- GEOLOCALITATION AIzaSyBMnuVYJyoPs1ueC9vwDC5TjXoYu08puC0 -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMnuVYJyoPs1ueC9vwDC5TjXoYu08puC0&callback=initMap&libraries=places"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 /* Inicio NAVBAR */
 nav{
 	background-color: whitesmoke;
@@ -67,3 +68,83 @@ footer{
 	}
 }
 /* Fin FOOTER */
+
+.val_filtros{
+	width: 70%;
+}
+
+.val_filtros__btn{
+	height: 5em;  
+	font-size:12px;
+	line-height:130%;  
+	
+}
+
+.switch{
+	margin-top:0.5em;
+}
+
+.val_filtros__btn__dos{
+	border:1px solid #000;
+	border-radius: 2px;
+}
+
+.val_filtros__parrafoUno{
+	font-weight: bold;
+	
+}
+
+.val_filtros_textdos{
+	color:$plomo;
+}
+
+.val_filtros__img__flechas{
+	width: 65px;
+	font-weight: bold;
+}
+
+//tarjetas - cards----------
+.val_tarjeta_cajaprecios{
+	
+   margin: 10px;
+   width: 50px;
+   height: 50px;
+   background:  rgba(0,0,0,.5);
+   border: 1px solid #000;
+   transition: all 1s ease;
+}
+   .val_tarjeta__cajaprecios:hover{
+      width: 59px;
+      transition: all 2s ease;
+    }
+
+
+
+//lo de arriba es una transicion pero no funciono revisar
+
+.val_tarjeta__imgdos{
+	
+}
+
+.val_tarjeta__contenido__img{
+	position:relative;
+	top: -6em;
+	@include resolucion;
+	border: 2px solid #fff;
+
+}
+
+.val_tarjeta__contenido__title{
+	font-weight: bold;
+	color: #7BBFEA;
+}
+
+.val_tarjeta__contenido__text{
+	color: #7BBFEA;
+	font-size: 12px;
+}
+
+.val_tarjeta__estrellas{
+	weight: 70px;
+}
+
