@@ -8,17 +8,63 @@
 	<link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
 </head>
 <body>
-	<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Airbnb</title>
-    <link rel="icon" type="image/png" href="assets/img/airbnb.png" />
-	<link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
-</head>
 <body>
-<body> 
+<!--INICIO Sección confirmar datos-->
+	<div class="cam_section__contenedor contenedor">
+		<div class="row">
+			<div class="col l2 m2">
+				<h6>Fechas</h6>
+			</div>
+			<div class="col l2 m2">
+				<input type="text" name="llegada" placeholder="01/01/2018">
+			</div>
+			<div class="col l2 m2">
+				<input type="text" name="salida" placeholder="01/02/2018">
+			</div>
+			<div class="input-field col l2 m2">
+      			<select class="validate">
+			        <option value="" disabled selected>Choose your option</option>
+			        <option value="1">Option 1</option>
+			        <option value="2">Option 2</option>
+			        <option value="3">Option 3</option>
+      			</select>
+    		</div>
+		</div>
+		<div class="row">
+			<div class="col l2 m2">
+				<h6>Tipos de <br>habitaciones<span><i class="fa fa-question-circle" aria-hidden="true"></i></span></h6>
+			</div>
+			<div class="col l2 m2">
+				<h6>
+					<span><i class="fa fa-home" aria-hidden="true"></i></span> 
+					Casa entera 
+					<input type="checkbox" id="test5"/>
+				</h6>
+			</div>
+			<div class="col l2 m2">
+				<h6>
+					<span><i class="fa fa-user" aria-hidden="true"></i></span> 
+					Habitación<br>privada 
+					<input type="checkbox" id="test5"/>
+				</h6>
+			</div>
+			<div class="col l2 m2">
+				<h6>
+					<span><i class="fa fa-users" aria-hidden="true"></i></span> 
+					Habitación<br>compartida 
+					<input type="checkbox" id="test5"/>
+				</h6>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col l2 m2">
+				<h6>Rango de<br>precios</h6>
+			</div>
+			<div class="col l8 m8">
+				<div id="test-slider"></div>
+			</div>
+		</div>
+	</div>
 <section class="val_filtros">
 <div class="contenedor">
 	<div class="row">
@@ -107,11 +153,7 @@
 
 	<script src="dist/js/script.js"></script>
 	<script type="text/javascript" src="assets/js/data.js"></script>
-    <script src="https://use.fontawesome.com/046c2163eb.js"></script>
-</body>
-</html>
-	<script src="dist/js/script.js"></script>
-	<script type="text/javascript" src="assets/js/data.js"></script>
-    <script src="https://use.fontawesome.com/046c2163eb.js"></script>
+  <script src="https://use.fontawesome.com/046c2163eb.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 </body>
 </html>
