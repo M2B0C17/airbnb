@@ -1,3 +1,100 @@
+.collapsible {
+  width: 100%;
+  height: auto; }
+  .collapsible .collapsible-header {
+    display: inline-flex;
+    border-style: none; }
+    .collapsible .collapsible-header .btn {
+      background-color: white;
+      color: black;
+      font-size: 10px;
+      margin-right: 200px;
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 5px;
+      width: auto;
+      margin-top: 0; }
+    .collapsible .collapsible-header .van p {
+      font-size: 10px;
+      margin-right: 20px; }
+  .collapsible ul:not(.browser-default) {
+    border-style: none; }
+  .collapsible .collapsible-body .van2 {
+    display: inline-flex; }
+    .collapsible .collapsible-body .van2 p {
+      margin-right: 20%; }
+    .collapsible .collapsible-body .van2 .select-wrapper input.select-dropdown {
+      border: 1px solid black;
+      text-align: center; }
+  .collapsible .collapsible-body .van3 {
+    display: inline-flex;
+    height: auto; }
+    .collapsible .collapsible-body .van3 [type=checkbox] + label {
+      height: auto;
+      font-size: 10px;
+      margin-left: 40%; }
+  .collapsible .collapsible-body .van4 {
+    display: inline-flex;
+    height: auto; }
+    .collapsible .collapsible-body .van4 [type=checkbox] + label {
+      height: auto;
+      display: inline-flex;
+      font-size: 10px;
+      margin-left: 40%;
+      margin-right: 20%; }
+      .collapsible .collapsible-body .van4 [type=checkbox] + label p {
+        margin-right: 30px; }
+  .collapsible .collapsible-body .van5 {
+    display: inline-flex;
+    height: auto; }
+    .collapsible .collapsible-body .van5 [type=checkbox] + label {
+      height: auto;
+      display: inline-flex;
+      font-size: 10px;
+      margin-left: 40%;
+      margin-right: 20%; }
+      .collapsible .collapsible-body .van5 [type=checkbox] + label p {
+        margin-right: 20px; }
+  .collapsible .collapsible-body .van6 {
+    display: inline-flex;
+    height: auto; }
+    .collapsible .collapsible-body .van6 [type=checkbox] + label {
+      height: auto;
+      display: inline-flex;
+      font-size: 10px;
+      margin-left: 40%;
+      margin-right: 20%; }
+      .collapsible .collapsible-body .van6 [type=checkbox] + label p {
+        margin-right: 20px; }
+  .collapsible .collapsible-body .van7 {
+    display: inline-flex;
+    height: auto; }
+    .collapsible .collapsible-body .van7 [type=checkbox] + label {
+      height: auto;
+      display: inline-flex;
+      font-size: 10px;
+      margin-left: 40%;
+      margin-right: 20%; }
+      .collapsible .collapsible-body .van7 [type=checkbox] + label p {
+        margin-right: 20px; }
+  .collapsible .btn-a {
+    margin-top: 20%;
+    background-color: white;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 1px solid black;
+    text-align: center;
+    color: black;
+    font-weight: bold; }
+  .collapsible .btn-b {
+    margin-top: 20%;
+    background-color: pink;
+    width: 150px;
+    border-radius: 1px solid pink;
+    text-align: center;
+    color: white;
+    font-weight: bold; }
+
 body {
   display: flex;
   min-height: 100vh;
@@ -5,6 +102,7 @@ body {
 
 main {
   flex: 1 0 auto; }
+
 /* Inicio NAVBAR */
 nav {
   background-color: whitesmoke; }
@@ -55,3 +153,55 @@ footer h6 {
   color: #a9a8a7; }
 
 /* Fin FOOTER */
+.val_filtros {
+  width: 70%; }
+
+.val_filtros__btn {
+  height: 5em;
+  font-size: 12px;
+  line-height: 130%; }
+
+.switch {
+  margin-top: 0.5em; }
+
+.val_filtros__btn__dos {
+  border: 1px solid #000;
+  border-radius: 2px; }
+
+.val_filtros__parrafoUno {
+  font-weight: bold; }
+
+.val_filtros_textdos {
+  color: #D8D8D8; }
+
+.val_filtros__img__flechas {
+  width: 65px;
+  font-weight: bold; }
+
+.card .card-image .card-title {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 8em; }
+
+.card .card-image .card-title:hover {
+  background-color: rgba(255, 0, 0, 0.5) #FFF; }
+
+.val_tarjeta__contenido__img {
+  position: relative;
+  top: -6em;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #fff; }
+
+.val_tarjeta__contenido__title {
+  font-weight: bold;
+  color: #7BBFEA; }
+
+.val_tarjeta__contenido__text {
+  color: #7BBFEA;
+  font-size: 10px; }
+
+.val_tarjeta__estrellas {
+  weight: 70px; }
+
+/*# sourceMappingURL=main.css.map */
