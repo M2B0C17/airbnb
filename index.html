@@ -2,14 +2,151 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Airbnb</title>
-    <link rel="icon" type="image/png" href="assets/img/airbnb.png" />
+	<link rel="icon" type="image/png" href="assets/img/airbnb.png" />
 	<link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
 </head>
 <body>
+	
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col m4 l4">
+					<div class="input-field pau_nav">
+						<span>Dónde</span>
+						<input placeholder="Dónde" id="nav-donde" type="text" class="validate">
+					</div>
+				</div>
+				<div class="col m4 l4">
+					<div class="input-field pau_nav">
+						<span>Cuándo</span>
+						<input placeholder="Cuándo" id="nav-cuando" type="text" class="validate">
+					</div>
+				</div>
+				<div class="col m4 l4">
+					<div class="col m8 l8">
+						<div class="input-field pau_nav">
+							<span>Huéspedes</span>
+							<select>
+								<option value="" disabled selected>Choose your option</option>
+								<option value="Adultos">Option 1</option>
+								<option value="Niños">Option 2</option>
+								<option value="Bebés">Option 3</option>
+								<option value="">Cancelar	Aplicar</option>
+							</select>
+						</div>
+					</div>
+					<div class="col m4 l4">
+						<div class="pau_btn-buscar">
+							<a class="waves-effect waves-light btn">Buscar</a>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<!-- termino Nav-->
+		</div>
+	</header>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col m12 l12">
+					<h5>Experiencias</h5>
+					<div class="slider"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="divider"></div>
+
+	<footer class="container">
+		<div class="row">
+			<div class="col m2 l2 push-m1 push-l">
+				<div class="pau_select-footer">
+					<div class="input-field col s12">
+						<select>
+							<option value="" disabled selected>Choose your option</option>
+							<option value="1">Option 1</option>
+							<option value="2">Option 2</option>
+							<option value="3">Option 3</option>
+						</select>
+						<label>Materialize Select</label>
+					</div>
+					<div class="input-field col s12">
+						<select>
+							<option value="" disabled selected>Choose your option</option>
+							<option value="1">Option 1</option>
+							<option value="2">Option 2</option>
+							<option value="3">Option 3</option>
+						</select>
+						<label>Materialize Select</label>
+					</div>
+				</div>
+			</div>
+			<div class="col m2 l2 push-m1 push-l">
+				<div class="pau_list-footer">
+					<h6 class="white-text">Airbnb</h6>
+					<ul>
+						<li><a class="text-lighten-3" href="#!">Acerca de</a></li>
+						<li><a class="text-lighten-3" href="#!">Empleo</a></li>
+						<li><a class="text-lighten-3" href="#!">Prensa</a></li>
+						<li><a class="text-lighten-3" href="#!">Políticas</a></li>
+						<li><a class="text-lighten-3" href="#!">Ayuda</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col m2 l2 push-m1 push-l">
+				<div class="pau_list-footer">
+					<h6 class="white-text">Descubre Airbnb</h6>
+					<ul>
+						<li><a class="text-lighten-3" href="#!">Confianza y seguridad</a></li>
+						<li><a class="text-lighten-3" href="#!">Invitaciones</a></li>
+						<li><a class="text-lighten-3" href="#!">Airbnb Action</a></li>
+						<li><a class="text-lighten-3" href="#!">Viajes de negocios</a></li>
+						<li><a class="text-lighten-3" href="#!">Guias</a></li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="col m2 l2 push-m1 push-l1">
+				<div class="pau_list-footer">
+					<h6 class="white-text">Hospedaje</h6>
+					<ul>
+						<li><a class="text-lighten-3" href="#!">Razones para hospedar</a></li>
+						<li><a class="text-lighten-3" href="#!">Hospitalidad</a></li>
+						<li><a class="text-lighten-3" href="#!">Ser un antitrión</a></li>
+						<li><a class="text-lighten-3" href="#!">responsable</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="divider"></div>
+	
+	<div class="row">
+		<div class="footer-copyright">
+			<div class="container">
+				<div class="pau_marca-footer left">
+					<span>© Airbnb, Inc.</span>
+				</div>
+
+				<div class="pau_marca-footer">
+					<a class="text-lighten-4 right" href="#!">Términos y Privacidad</a>
+					<a class="text-lighten-4 right" href="#!">Mapa del sitio</a>
+					<a class="text-lighten-4 right" href="#!"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a class="text-lighten-4 right" href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a class="text-lighten-4 right" href="#!"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
 
 	<script src="dist/js/script.js"></script>
-    <script src="https://use.fontawesome.com/046c2163eb.js"></script>
+	<script src="https://use.fontawesome.com/046c2163eb.js"></script>
 </body>
 </html>
