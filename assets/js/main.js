@@ -37,19 +37,8 @@ $(document).ready(function(){
 
   });
 
-  function ver(){
-        var place = $("#nav-donde").val();
-        console.log(place);
-        if (place =! undefined){
-            localStorage.setItem('lugar',place);
-            return true;
-        } else{
-            $('#search').attr('value', '');
-        }
-    }
-
   $('#search').attr('value', localStorage.getItem('lugar'));
-  ver();
+ 
   initialize();
 });
 
@@ -100,5 +89,9 @@ function initialize() {
   var autocompletedos = new google.maps.places.Autocomplete(destino);
 }
 
+
+function guardarDatos(){
+  localStorage.lugar = $('#nav-donde').val();
+}
 
 
