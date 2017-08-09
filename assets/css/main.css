@@ -1,3 +1,51 @@
+/* Estilos Index */
+/****** INICIO ESTILOS INDEX.HTML ****/
+.row.sinMargin {
+  margin-bottom: 0 !important; }
+
+.row .col.pau_pegado {
+  padding: 0; }
+
+.input-field input {
+  margin: 0 0 0 0;
+  width: 200px; }
+
+.pau_navBar {
+  border: 1px solid black;
+  margin-top: 60px; }
+  .pau_navBar .pau_navBar__buscador input {
+    border-bottom: transparent !important;
+    margin-bottom: 0; }
+  .pau_navBar .pau_navBar__buscador input:active {
+    border-bottom: 0 !important; }
+  .pau_navBar #pau_cuando {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    height: 81px; }
+    .pau_navBar #pau_cuando .pau_flecha .col {
+      margin-left: 0 !important; }
+    .pau_navBar #pau_cuando .pau_flecha i {
+      display: none; }
+    .pau_navBar #pau_cuando .pau_btn--cuando a {
+      height: 3rem;
+      color: #9e9e9e; }
+    .pau_navBar #pau_cuando .pau_btn--salida > input {
+      display: none; }
+    .pau_navBar #pau_cuando .pau_btn--llegada > input {
+      display: none; }
+  .pau_navBar #pau_huespedes .pau_huespedes__btn {
+    padding-top: 25px; }
+
+.carousel {
+  height: 470px; }
+  .carousel .carousel-item {
+    top: -120px; }
+    .carousel .carousel-item .card .card-content {
+      padding: 7px 1px; }
+      .carousel .carousel-item .card .card-content span {
+        color: black; }
+
+/*** FIN ESTILOS INDEX.HTML ***/
 body {
   display: flex;
   min-height: 100vh;
@@ -23,7 +71,8 @@ nav {
 nav .input-field label i {
   color: black;
   -webkit-transition: color .3s;
-  transition: color .3s; }
+  transition: color .3s;
+  font-family: 'Helvetica', FontAwesome, sans-serif; }
 
 nav, nav a, nav ul a, span.badge.new {
   color: #000000;
@@ -125,7 +174,7 @@ nav, nav a, nav ul a, span.badge.new {
   .collapsible .btn-a {
     margin-top: 20%;
     background-color: white;
-    width: 150px;
+    width: 120px;
     border: 1px solid black;
     border-radius: 1px solid black;
     text-align: center;
@@ -134,12 +183,55 @@ nav, nav a, nav ul a, span.badge.new {
   .collapsible .btn-b {
     margin-top: 20%;
     background-color: pink;
-    width: 150px;
+    width: 120px;
     border-radius: 1px solid pink;
     text-align: center;
     color: white;
     font-weight: bold; }
 
+/*Estilo agregado vane*/
+.caja {
+  position: relative;
+  z-index: 0; }
+  .caja h2 {
+    margin-top: -60px;
+    color: white;
+    position: relative;
+    z-index: 1; }
+
+/* Fin Estilo agregado vane*/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+main {
+  flex: 1 0 auto; }
+
+/* Inicio NAVBAR */
+nav {
+  background-color: whitesmoke; }
+  nav .mac_contenedorNav {
+    margin-left: 5%;
+    margin-right: 5%; }
+  nav .mac_cajaLogo {
+    background-color: whitesmoke;
+    padding: 17px;
+    border: none;
+    border-right: 2px solid #cfcfcf; }
+  nav input {
+    width: 100%; }
+
+nav .input-field label i {
+  color: black;
+  -webkit-transition: color .3s;
+  transition: color .3s; }
+
+nav, nav a, nav ul a, span.badge.new {
+  color: #000000;
+  font-size: 15px; }
+
+/* Fin NAVBAR */
 /* Inicio MAPA */
 .mapa #map {
   height: 100%;
