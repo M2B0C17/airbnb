@@ -19817,85 +19817,104 @@ if (jQuery) {
 var datos = [
 {"id":1,
 "precio": 12000,
+"city":"Arica",/*agregados nuevos hasta abajo*/
 "image_url":"1.jpg",
-"calificacion":3},
+"calificacion":"★★★"},/*agregados nuevos hasta abajo*/
 {"id":2,
 "precio": 22000,
+"city":"Iquique",
 "image_url":"2.jpg",
-"calificacion":3},
+"calificacion":"★★★★★"},
 {"id":3,
 "precio": 10000,
+"city":"Antofagasta",
 "image_url":"3.png",
-"calificacion":3},
+"calificacion":"★★★★"},
 {"id":4,
 "precio": 15000,
+"city":"Algarrobo",
 "image_url":"4.jpg",
-"calificacion":3},
+"calificacion":"★★★"},
 {"id":5,
 "precio": 35000,
+"city":"La Serena",
 "image_url":"5.jpg",
-"calificacion":3},
+"calificacion":"★★★★★"},
 {"id":6,
 "precio": 44000,
+"city":"Coquimbo",
 "image_url":"6.jpg",
-"calificacion":3},
+"calificacion":"★★★★★"},
 {"id":7,
 "precio": 72000,
+"city":"Los vilos",
 "image_url":"7.jpg",
-"calificacion":3},
+"calificacion":"★★★★"},
 {"id":8,
 "precio": 27000,
+"city":"valpariso",
 "image_url":"8.jpg",
-"calificacion":3},
+"calificacion":"★★★★"},
 {"id":9,
 "precio": 27000,
+"city":"Santiago",
 "image_url":"9.jpg",
-"calificacion":3},
+"calificacion":"★★★"},
 {"id":10,
 "precio": 100000,
+"city":"Pucon",
 "image_url":"10.jpg",
-"calificacion":3},
+"calificacion":"★★★★★"},
 {"id":11,
 "precio": 33000,
+"city":"Chillan",
 "image_url":"11.jpg",
-"calificacion":3},
+"calificacion":"★★★★"},
 {"id":12,
 "precio": 5000,
+"city":"Temuco",
 "image_url":"12.jpg",
-"calificacion":3},
+"calificacion":"★★★★★"},
 {"id":13,
 "precio": 35000,
+"city":"Valdivia",
 "image_url":"13.jpg",
-"calificacion":3},
+"calificacion":"★★★★"},
 {"id":14,
-"precio": 8000,
+"precio": 18000,
+"city":"Osorno",
 "image_url":"14.jpg",
-"calificacion":3},
+"calificacion":"★★★★"},
 {"id":15,
-"precio": 5000,
+"precio": 15000,
+"city":"Puerto Montt",
 "image_url":"15.jpg",
-"calificacion":3},
+"calificacion":"★★★★"},
 {"id":16,
-"precio": 7000,
+"precio": 37000,
+"city":"Chiloe",
 "image_url":"16.jpg",
-"calificacion":3},
+"calificacion":"★★★★★"},
 {"id":17,
 "precio": 29000,
+"city":"Torres del Paine",
 "image_url":"17.jpg",
-"calificacion":3},
+"calificacion":"★★★★★"},
 {"id":18,
 "precio": 53000,
+"city":"Punta Arenas",
 "image_url":"18.jpg",
-"calificacion":3},
+"calificacion":"★★★"},
 {"id":19,
 "precio": 21000,
+"city":"Coyaique",
 "image_url":"19.jpg",
-"calificacion":3},
+"calificacion":"★★★★★"},
 {"id":20,
 "precio": 20000,
+"city":"Calama",
 "image_url":"20.JPG",
-"calificacion":3},
-
+"calificacion":"★★★"},
 ]
 $(document).ready(function(){
 
@@ -19903,22 +19922,17 @@ $(document).ready(function(){
   /*Select*/
     $('select').material_select();
     $("#range_07").ionRangeSlider({
-      type: "double",
-      grid: true,
-      from: 1,
-      to: 5,
-      values: [0, 10, 100, 1000, 10000, 100000, 1000000]
-  });
+        type: "double",
+        grid: true,
+        from: 1,
+        to: 5,
+        values: [0, 10, 100, 1000, 10000, 100000, 1000000]
+    });
 
   /*Calendario*/
   $(function() {
       $('input[name="daterange"]').daterangepicker();
   });
-
-/* Mostrar datos guardados con LocalStorage*/
-  $('#search').attr('value', localStorage.getItem('lugar'));
- 
-  initialize();
 
   /*Rango de precios*/  
   $(function(){
@@ -19936,17 +19950,21 @@ $(document).ready(function(){
     var valorUno = $('.irs-from').text();
     var valorDos = $('.irs-to').text();
 
-    $('.cam_section__range-valor1').html(valorUno);
-    $('.cam_section__range-valor2').html(valorDos);
+    $('.cam_section__range-valor1').text(valorUno);
+    $('.cam_section__range-valor2').text(valorDos);
 
   });
+
+  $('#search').attr('value', localStorage.getItem('lugar'));
+ 
+  initialize();
 
 });
 
 
 /* MAPA */
 function initMap() {
-  // Iniciando ubicación
+    // Iniciando ubicación
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -9.1191427, lng: -77.0349046},
         zoom: 14
@@ -19982,7 +20000,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: The Geolocation service failed.' :
         'Error: Your browser doesn\'t support geolocation.');
 }
-  
+    
 function initialize() {
   var final = document.getElementById('search');
   var autocomplete = new google.maps.places.Autocomplete(final);
@@ -19990,7 +20008,7 @@ function initialize() {
   var autocompletedos = new google.maps.places.Autocomplete(destino);
 }
 
-/* Inicio LocalStorage*/
+
 $('#siguiente').click(function() {
   guardarDatos();
 });
@@ -20000,134 +20018,103 @@ function guardarDatos(){
   localStorage.lugar = $('#nav-donde').val();
 }
 
-/* Fin LocalStorage*/
 
-
- /* Funcionalidad del filter vanessa Perez*/
-    
-$('.collapsible').collapsible();
-    $(".btn").click(function(e){
-
-         
-      /* codigo para las camas*/
-      /*if(('#opcion').val(1)){
-        var opcion = 1;
-      }
-      alert(opcion);
-      if(('#opcion').val(2)== selected){
-        var opcion = 2;
-      }
-      alert(opcion);
-      if(('#opcion').val(3)== selected){
-        var opcion = 3;
-      }
-      alert(opcion);
-      if(('#opcion').val(4)== selected){
-        var opcion = 4;
-      }
-      alert(opcion);
-      if(('#opcion').val(5)== selected){
-        var opcion = 5;
-      }
-      alert(opcion);
-      if(('#opcion').val(6)== selected){
-        var opcion = 6;
-      }
-      alert(opcion);*/
-
-      /* codigo para los checked*/
-      var seleccion = $("#box").is(":checked");
-      if(seleccion){ 
+  /* Funcionalidad del filter vanessa Perez*/     
+$(".btn-b").click(function(){      
+   /* codigo para los checked*/
+   var seleccion = $("#box").is(":checked");
+    if(seleccion){ 
         seleccion = 1; 
-      }else if (!seleccion){
+    }else if (!seleccion){
         seleccion = 0;
-      }       
+    }           
     var seleccion1 = $("#box1").is(":checked");
-      if(seleccion1){ 
+    if(seleccion1){ 
         seleccion1 = 1; 
-      }else if(!seleccion1){
+    }else if(!seleccion1){
         seleccion1 = 0;
-      }
+    }
     var seleccion2 = $("#box2").is(":checked");
-      if(seleccion2){ 
+    if(seleccion2){ 
         seleccion2 = 1; 
-      }else if(!seleccion2){
+    }else if(!seleccion2){
         seleccion2 = 0;
-      }
+    }
     var seleccion3 = $("#box3").is(":checked");
-      if(seleccion3){ 
+    if(seleccion3){ 
         seleccion3 = 1; 
-      }else if(!seleccion3){
+    }else if(!seleccion3){
         seleccion3 = 0;
-      }
+    }
     var seleccion4 = $("#box4").is(":checked");
-      if(seleccion4){ 
+    if(seleccion4){ 
         seleccion4 = 1; 
-      }else if(!seleccion4){
+    }else if(!seleccion4){
         seleccion4 = 0;
-      }
+    }
     var seleccion5 = $("#box5").is(":checked");
-      if(seleccion5){ 
+    if(seleccion5){ 
         seleccion5 = 1; 
-      }else if(!seleccion5){
+    }else if(!seleccion5){
         seleccion5 = 0;
-      }
+    }
     var seleccion6 = $("#box6").is(":checked");
-      if(seleccion6){ 
+    if(seleccion6){ 
         seleccion6 = 1; 
-      }else if(!seleccion6){
+    }else if(!seleccion6){
         seleccion6 = 0;
-      }
+    }
     var seleccion7 = $("#box7").is(":checked");
-      if(seleccion7){ 
+    if(seleccion7){ 
         seleccion7 = 1; 
-      }else if(!seleccion7){
+    }else if(!seleccion7){
         seleccion7 = 0;
-      }
+    }
     var seleccion8 = $("#box8").is(":checked");
-      if(seleccion8){ 
+    if(seleccion8){ 
         seleccion8 = 1; 
-      }else if(!seleccion8){
+    }else if(!seleccion8){
         seleccion8 = 0;
-      }
+    }
     var seleccion9 = $("#box9").is(":checked");
-      if(seleccion9){ 
+    if(seleccion9){ 
         seleccion9 = 1; 
-      }else if(!seleccion9){
+    }else if(!seleccion9){
         seleccion9 = 0;
-      }
+    }
     var seleccion10 = $("#box10").is(":checked");
-      if(seleccion10){ 
+    if(seleccion10){ 
         seleccion10 = 1; 
-      }else if(!seleccion10){
+    }else if(!seleccion10){
         seleccion10 = 0;
-      }
+    }
     var seleccion11 = $("#box11").is(":checked");
-      if(seleccion11){ 
+    if(seleccion11){ 
         seleccion11 = 1; 
-      }else if(!seleccion11){
+    }else if(!seleccion11){
         seleccion11 = 0;
-      }
+    }
     var seleccion12 = $("#box12").is(":checked");
-      if(seleccion12){ 
+    if(seleccion12){ 
         seleccion12 = 1; 
-      }else if(!seleccion12){
+    }else if(!seleccion12){
         seleccion12 = 0;
-      }
-    
+    }
+        
     var result = [seleccion, seleccion1, seleccion2, seleccion3, seleccion4, seleccion5, seleccion6, seleccion7, seleccion8, seleccion9, seleccion10, seleccion11, seleccion12];
-     
+         
     var result2 = result.reduce(function(valor, valor2){ 
-      return valor + valor2;
+        return valor + valor2;
     });
-
     for(i=0; i<=datos.length; i++){
-      var suma = datos[i].precio + (result2*5000);
-
-      $(".caja").append("<img src=assets/img/"+ datos[i].image_url + ">"
-        + "<h2>$"+suma+"</h2>");
-    }   
+            var suma = datos[i].precio + (result2*5000);
+        $(".caja").append("<img src=assets/img/"+ datos[i].image_url + ">"
+            + "<h2>$"+ suma +"</h2>"
+            + "<h5>"+ datos[i].city +"</h5>"/*nuevo agregado*/
+            + "<p>Casa/apto entero ° 3 huespedes<h4>"+ datos[i].calificacion +"</h4>° 11 eval</p>");/*nuevo agregado*/
+    }       
 });
+/*FIN Filtro vane*/
 
-    /*FIN Filtro vane*/
+
 

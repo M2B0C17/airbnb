@@ -125,7 +125,7 @@ nav, nav a, nav ul a, span.badge.new {
   .collapsible .btn-a {
     margin-top: 20%;
     background-color: white;
-    width: 150px;
+    width: 120px;
     border: 1px solid black;
     border-radius: 1px solid black;
     text-align: center;
@@ -134,12 +134,37 @@ nav, nav a, nav ul a, span.badge.new {
   .collapsible .btn-b {
     margin-top: 20%;
     background-color: pink;
-    width: 150px;
+    width: 120px;
     border-radius: 1px solid pink;
     text-align: center;
     color: white;
     font-weight: bold; }
 
+/*Estilo agregado vane*/
+.caja {
+  position: relative;
+  z-index: 0;
+  /*nuevos agregados*/ }
+  .caja h2 {
+    margin-top: -40px;
+    color: white;
+    font-size: 30px;
+    /*Cambio de tamaNo*/
+    position: relative;
+    z-index: 1; }
+  .caja h5 {
+    font-size: 17px;
+    font-weight: bold; }
+  .caja p {
+    margin-top: -15px;
+    font-size: 13px;
+    display: inline-flex; }
+  .caja h4 {
+    color: blue;
+    font-size: 10px;
+    display: inline-flex; }
+
+/* Fin Estilo agregado vane*/
 /* Inicio MAPA */
 .mapa #map {
   height: 100%;
