@@ -30,30 +30,30 @@ function initMap() {
         zoom: 14
     });
 
-    var infoWindow = new google.maps.InfoWindow({map: map});
+var infoWindow = new google.maps.InfoWindow({map: map});
 
-    // Al cargar el html
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              	lat: position.coords.latitude,
-              	lng: position.coords.longitude
-            };
+// Al cargar el html
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        };
 
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Estas Aquí!!');
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
+        infoWindow.setPosition(pos);
+        infoWindow.setContent('Estas Aquí!!');
+        map.setCenter(pos);
+    }, function() {
+        handleLocationError(true, infoWindow, map.getCenter());
+    	});
 
     } else {
         // En caso de que la pagina no admita geolocalizacion
         handleLocationError(false, infoWindow, map.getCenter());
     }
-
    	 /* Autocomplete */
 	  var final = (document.getElementById('search'));
+	  
    /*Rango de precios*/	 
 $(function(){
   $('#rango').ionRangeSlider({
