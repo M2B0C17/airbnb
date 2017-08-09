@@ -56,8 +56,8 @@ nav, nav a, nav ul a, span.badge.new {
 }
 
 
-
-  .collapsible{
+/*Filtros  vane*/
+ .collapsible{
 	width: 100%;
 	height: auto;
 	.collapsible-header{
@@ -182,16 +182,35 @@ nav, nav a, nav ul a, span.badge.new {
 
 
 /*Estilo agregado vane*/
+/*Estilo agregado vane*/
 .caja{
 	position: relative;
 		z-index: 0;
 	h2{
-		margin-top: -60px;
+		margin-top: -40px;
 		color: white;
+		font-size:30px;/*Cambio de tamaNo*/
 		position: relative;
 		z-index: 1;
 	}
+	h5{
+		font-size: 17px;
+		font-weight: bold;
+	}
+	/*nuevos agregados*/
+	p{
+		margin-top: -15px;
+		font-size: 13px;
+		display: inline-flex;		
+	}
+	h4{
+		color: blue;
+		font-size: 10px;
+		display: inline-flex;
+	}
+	
 }
+/* Fin Estilo agregado vane*/
 /* Fin Estilo agregado vane*/
 
 body {
