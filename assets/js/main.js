@@ -1,6 +1,21 @@
 $(document).ready(function(){
 
   $('#nav-donde').focus();
+
+  /* SLIDER - INDEX.HTML */
+
+    $('.carousel').carousel({
+        dist:0,
+        padding:20,
+    });
+
+    // Next slide
+    $('.carousel').carousel('next');
+
+    // Previous slide
+    $('.carousel').carousel('prev');
+
+
   /*Select*/
     $('select').material_select();
     $("#range_07").ionRangeSlider({
@@ -20,20 +35,19 @@ $(document).ready(function(){
   $(function(){
     $('#rango').ionRangeSlider({
       type: "double",
-      min: 1000,
-      max: 2000,
-      from: 1200,
-      to: 1800,
+      min: 0,
+      max: 300000,
+      from: 0,
+      to: 300000,
       hide_min_max: true,
       hide_from_to: false,
-      grid: false,
+      grid: false
     });
+        var valorUno = $('.irs-from').text()
+        var valorDos = $('.irs-to').val();
 
-    var valorUno = $('.irs-from').text();
-    var valorDos = $('.irs-to').text();
-
-    $('.cam_section__range-valor1').text(valorUno);
-    $('.cam_section__range-valor2').text(valorDos);
+        $('.cam_section__range-valor1').text(valorUno);
+        $('.cam_section__range-valor2').text(valorDos);
 
   });
 
