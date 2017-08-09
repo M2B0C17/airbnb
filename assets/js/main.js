@@ -21,6 +21,26 @@ $(document).ready(function(){
  
   initialize();
 
+  /*Rango de precios*/  
+  $(function(){
+    $('#rango').ionRangeSlider({
+      type: "double",
+      min: 1000,
+      max: 2000,
+      from: 1200,
+      to: 1800,
+      hide_min_max: true,
+      hide_from_to: false,
+      grid: false,
+    });
+
+    var valorUno = $('.irs-from').text();
+    var valorDos = $('.irs-to').text();
+
+    $('.cam_section__range-valor1').html(valorUno);
+    $('.cam_section__range-valor2').html(valorDos);
+
+  });
 
 });
 
@@ -84,10 +104,12 @@ function guardarDatos(){
 /* Fin LocalStorage*/
 
 
-      /* Funcionalidad del filter vanessa Perez*/
+ /* Funcionalidad del filter vanessa Perez*/
     
+$('.collapsible').collapsible();
+    $(".btn").click(function(e){
 
-    $(".btn-b").click(function(e){
+         
       /* codigo para las camas*/
       /*if(('#opcion').val(1)){
         var opcion = 1;
@@ -206,28 +228,7 @@ function guardarDatos(){
       $(".caja").append("<img src=assets/img/"+ datos[i].image_url + ">"
         + "<h2>$"+suma+"</h2>");
     }   
-}
+});
+
     /*FIN Filtro vane*/
-
-
-  /*Rango de precios*/  
-  $(function(){
-    $('#rango').ionRangeSlider({
-      type: "double",
-      min: 1000,
-      max: 2000,
-      from: 1200,
-      to: 1800,
-      hide_min_max: true,
-      hide_from_to: false,
-      grid: false,
-    });
-
-    var valorUno = $('.irs-from').text();
-    var valorDos = $('.irs-to').text();
-
-    $('.cam_section__range-valor1').html(valorUno);
-    $('.cam_section__range-valor2').html(valorDos);
-
-  });
 
