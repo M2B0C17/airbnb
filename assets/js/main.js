@@ -8,6 +8,41 @@ $(document).ready(function(){
 	    to: 5,
 	    values: [0, 10, 100, 1000, 10000, 100000, 1000000]
 	});
+
+	/************** Estilos Index.html ************/
+	/* SLIDER - INDEX.HTML */
+
+	$('.carousel').carousel({
+		dist:0,
+		padding:20,
+	});
+
+    // Next slide
+    $('.carousel').carousel('next');
+
+	// Previous slide
+	$('.carousel').carousel('prev');
+
+    //color: #9e9e9e;
+
+    $("#nav-cuando").click(function(){
+    	$(this).hide();
+    	$('#nav-salida').css('display','block');
+    	$('#nav-llegada').css('display','block');
+    	$('#flecha').css('display','block');
+    })
+
+    $("#nav-salida").click(function () {
+    	$(this).css('color','#26a69a');
+    	$('#nav-llegada').css('color','#9e9e9e');
+    })
+
+    $("#nav-llegada").click(function () {
+    	$(this).css('color','#26a69a');
+    	$('#nav-salida').css('color','#9e9e9e');
+    })
+
+    /************** Fin Estilos Index.html ************/
 });
 	/* Geolocalización */
 	function initMap(){
