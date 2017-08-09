@@ -162,7 +162,7 @@ nav, nav a, nav ul a, span.badge.new {
 	.btn-a{
 		margin-top: 20%;
 		background-color: white;
-		width: 150px;
+		width: 120px;
 		border: 1px solid black;
 		border-radius: 1px solid black;
 		text-align: center;
@@ -172,13 +172,68 @@ nav, nav a, nav ul a, span.badge.new {
 	.btn-b{
 		margin-top: 20%;
 		background-color: pink;
-		width: 150px;
+		width: 120px;
 		border-radius: 1px solid pink;
 		text-align: center;
 		color: white;
 		font-weight: bold;
 	}
 }
+
+
+/*Estilo agregado vane*/
+.caja{
+	position: relative;
+		z-index: 0;
+	h2{
+		margin-top: -60px;
+		color: white;
+		position: relative;
+		z-index: 1;
+	}
+}
+/* Fin Estilo agregado vane*/
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+/* Inicio NAVBAR */
+nav{
+	background-color: whitesmoke;
+	.mac_contenedorNav{
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.mac_cajaLogo{
+		background-color: whitesmoke;
+		padding: 17px;
+		border: none;
+		border-right: 2px solid #cfcfcf;
+	}
+	input{
+		width: 100%;
+	}
+}
+
+nav .input-field label i {
+    color: black;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+}
+
+nav, nav a, nav ul a, span.badge.new {
+    color: #000000;
+    font-size: 15px;
+}
+/* Fin NAVBAR */
+
 
 /* Inicio MAPA */
 .mapa{
