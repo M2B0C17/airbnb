@@ -19989,6 +19989,11 @@ function initialize() {
 }
 
 
+$('#siguiente').click(function() {
+  guardarDatos();
+});
+
+
 function guardarDatos(){
   localStorage.lugar = $('#nav-donde').val();
 }
