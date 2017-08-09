@@ -19,14 +19,15 @@
   <nav>
       <div class="nav-wrapper mac_contenedorNav">
         <div class="row">
-          <div class="col m1 l1">
+        <!-- Acá Style -->
+          <div class="col m1 l1" style="padding-top: -11px;">
             <a href="#" class="brand-logo"><img src="assets/img/airbnbPeque.png" class="mac_cajaLogo"></a>
           </div>
           <div class="col m5 l5">
             <form>
               <div class="input-field">
                 <input id="search" type="text" required> <!-- id del DESTINO (search) -->
-                <label class="label-icon" for="search"><i class="material-icons ">search</i></label>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
               </div>
             </form>
           </div>
@@ -55,12 +56,14 @@
               <input type="text" name="daterange" value="09/08/2017 - 10/08/2017" />
             </div>
             <div class="input-field col l4 m4">
-                  <ul class="collapsible-huespedes" data-collapsible="accordion">
+            <!-- Acá Style -->
+                  <ul class="collapsible-huespedes" style="margin-top: -20px;" data-collapsible="accordion">
                     <li>
-                      <div class="collapsible-header"><span>1</span> Huespedes</div>
-                      <div class="collapsible-body"><p>Adultos</p> <span><i class="fa fa-plus-circle menos" aria-hidden="true"></i>1<i class="fa fa-plus-circle mas" aria-hidden="true"></i></span></div>
-                      <div class="collapsible-body"><p>Niños<br><small>De 2 a 12</small></p> <span><i class="fa fa-plus-circle menos" aria-hidden="true"></i>1<i class="fa fa-plus-circle mas" aria-hidden="true"></i></span></div>
-                      <div class="collapsible-body"><p>Bebes<br><small>De 0 a 2</small></p> <span><i class="fa fa-plus-circle menos" aria-hidden="true"></i>1<i class="fa fa-plus-circle mas" aria-hidden="true"></i></span></div>
+                    <!-- Acá Style -->
+                      <div class="collapsible-header" style="background-color: transparent;"><span> 1 </span> Huespedes</div>
+                      <div class="collapsible-body" style="background-color: #60bbc6; color: white; padding: 5px; height: 30px; text-align: center;"><p> Adultos </p> <span><i class="fa fa-plus-circle menos" aria-hidden="true"></i> 1 <i class="fa fa-plus-circle mas" aria-hidden="true"></i></span></div>
+                      <div class="collapsible-body" style="background-color: #60bbc6; color: white; padding: 5px; height: 30px; text-align: center;"><p> Niños <br><small> De 2 a 12 </small></p> <span><i class="fa fa-plus-circle menos" aria-hidden="true"></i> 1 <i class="fa fa-plus-circle mas" aria-hidden="true"></i></span></div>
+                      <div class="collapsible-body" style="background-color: #60bbc6; color: white; padding: 5px; height: 30px; text-align: center;"><p>Bebes<br><small>De 0 a 2</small></p> <span><i class="fa fa-plus-circle menos" aria-hidden="true"></i> 1 <i class="fa fa-plus-circle mas" aria-hidden="true"></i></span></div>
                     </li>
                   </ul>
               </div>
@@ -98,9 +101,8 @@
             <div class="col l8 m8">
               <div class="cam_section__range">
                 <input type="text" id="rango" class="cam_section__range-medir">
-                <div class=" cam_section__range-valores">
-                  <div class="cam_section__range-valores-entre text-center"><span class="cam_section__range-valor1"></span> - <span class="cam_section__range-valor2"></span></div>
-                </div>
+                <a class=" btn js-create-52">Calcular Rango</a>
+                <a class=" btn js-destroy-52">Mostrar Rango</a>
               </div>
             </div>
           </div>
@@ -186,7 +188,7 @@
                       <form action="#">
                         <p>
                             <input type="checkbox" id="box" cheched="cheched"/>
-                            <label for="box">Superhost<br>Quedate en casa de<br>anfitriones excepcionales<br>Mas informacion</label>
+                            <label for="box">Superhost quedate en casa de anfitriones excepcionales<br>Mas informacion</label>
                         </p>
                       </form>
                     </div>
@@ -302,23 +304,6 @@
                   </div>
                 </div>
                 <!--FIN MODIFICACION HECHA POR VANE PARA LA IMPRESION DEL FILTRO-->
-                <div class="col m6 l6 left">
-                    <div class="val_tarjeta card">
-                      <div class="card-image">
-                          <img class="val_tarjeta__imguno" src="assets/img/5.jpg">
-                          <div class="val_tarjeta__cajaprecios"><span class="card-title">Caja con el precio</span></div>
-                      </div>
-                      <div class="val_tarjeta__contenido card-content">
-                          <p class="val_tarjeta__contenido__title">City retrest amidst the forest</p>
-                          <img class="val_tarjeta__contenido__img circle right" src="assets/img/perfiles/perfil1.jpg" alt="niña sentada en el pasto" width="100"> 
-                          <p class="val_tarjeta__contenido__text">Casa/apto entero ° 3 huespedes <img class="val_tarjeta__estrellas" src="assets/docs/estrellas4de5.jpg" alt="estrellas iconos"> ° 11 eval</p>
-                      </div>
-                      <div class="card-action">
-                      
-                      </div>
-                    </div>
-                </div>
-                <!--aqui termina la primera card con la imagen-->
               </div>
           </div>
       </div>

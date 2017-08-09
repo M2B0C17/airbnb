@@ -19949,7 +19949,41 @@ $(document).ready(function(){
       $('input[name="daterange"]').daterangepicker();
   });
 
-  /*Rango de precios*/  
+
+
+var $range = $("#rango"),
+    $create_btn = $(".js-create-52"),
+    $destroy_btn = $(".js-destroy-52"),
+    slider;
+
+var create = function () {
+    $range.ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 1000,
+        grid: true
+    });
+
+    slider = $range.data("ionRangeSlider");
+};
+
+$create_btn.on("click", function () {
+    create();
+});
+
+$destroy_btn.on("click", function () {
+    slider && slider.destroy();
+});
+
+
+
+
+
+
+
+
+
+  /*Rango de precios 
   $(function(){
     $('#rango').ionRangeSlider({
       type: "double",
@@ -19962,14 +19996,15 @@ $(document).ready(function(){
       grid: false
     });
         var valorUno = $('.irs-from').text()
-        var valorDos = $('.irs-to').val();
+        var valorDos = $('.irs-to').text();
 
         $('.cam_section__range-valor1').text(valorUno);
         $('.cam_section__range-valor2').text(valorDos);
 
   });
 
-  $('#search').attr('value', localStorage.getItem('lugar'));
+    $('#search').attr('value', localStorage.getItem('lugar'));
+    $('#cam_fecha').attr('value', localStorage.getItem('fecha'));*/ 
  
   initialize();
 
@@ -20033,7 +20068,9 @@ $('#siguiente').click(function() {
 
 function guardarDatos(){
   localStorage.lugar = $('#nav-donde').val();
+  localStorage.fecha = $('#date').val();
 }
+
 
 
   /* Funcionalidad del filter vanessa Perez*/     
