@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+  $('#nav-donde').focus();
   /*Select*/
     $('select').material_select();
     $("#range_07").ionRangeSlider({
@@ -35,6 +37,19 @@ $(document).ready(function(){
 
   });
 
+  function ver(){
+        var place = $("#nav-donde").val();
+        console.log(place);
+        if (place =! undefined){
+            localStorage.setItem('lugar',place);
+            return true;
+        } else{
+            $('#search').attr('value', '');
+        }
+    }
+
+  $('#search').attr('value', localStorage.getItem('lugar'));
+  ver();
   initialize();
 });
 
@@ -84,11 +99,6 @@ function initialize() {
   var destino = document.getElementById('nav-donde');
   var autocompletedos = new google.maps.places.Autocomplete(destino);
 }
-
-
-
-
-
 
 
 

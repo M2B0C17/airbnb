@@ -19898,6 +19898,8 @@ var datos = [
 
 ]
 $(document).ready(function(){
+
+  $('#nav-donde').focus();
   /*Select*/
     $('select').material_select();
     $("#range_07").ionRangeSlider({
@@ -19934,6 +19936,23 @@ $(document).ready(function(){
 
   });
 
+  function ver(){
+        var place = $("#nav-donde").val();
+        console.log(place);
+        if (place =! undefined){
+            localStorage.setItem('lugar',place);
+            return true;
+        } else{
+            $('#search').attr('value', '');
+        }
+    }
+
+    //-----------------guardamos las tarjetas ingreadas en perfil.html-------------
+
+    //Esta seccion imprime el correo electronico guardado en storage
+  
+  $('#search').attr('value', localStorage.getItem('lugar'));
+  ver();
   initialize();
 });
 
@@ -19985,9 +20004,20 @@ function initialize() {
 }
 
 
+$('#siguiente').click(function() {
+  guardarDatos();
+});
 
 
-
-
+function guardarDatos(){
+ localStorage.lugar = $('#nav-donde').val();
+console.log($('#nav-donde').val());
+  if ((localStorage.lugar != undefined)) {
+    $('#search').attr('value', localStorage.lugar);
+  }
+  else{
+    $('#search').attr('value', ''); 
+  }
+}
 
 
