@@ -43,13 +43,13 @@ nav, nav a, nav ul a, span.badge.new {
     .cam_section__range .cam_section__range-valores .cam_section__range-valores-entre {
       text-align: center; }
 
-.collapsible {
+.collapsible-vane {
   width: 100%;
   height: auto; }
-  .collapsible .collapsible-header {
+  .collapsible-vane .collapsible-header {
     display: inline-flex;
     border-style: none; }
-    .collapsible .collapsible-header .btn {
+    .collapsible-vane .collapsible-header .btn {
       background-color: white;
       color: black;
       font-size: 10px;
@@ -59,70 +59,70 @@ nav, nav a, nav ul a, span.badge.new {
       padding: 5px;
       width: auto;
       margin-top: 0; }
-    .collapsible .collapsible-header .van p {
+    .collapsible-vane .collapsible-header .van p {
       font-size: 10px;
       margin-right: 20px; }
-  .collapsible ul:not(.browser-default) {
+  .collapsible-vane ul:not(.browser-default) {
     border-style: none; }
-  .collapsible .collapsible-body .van2 {
+  .collapsible-vane .collapsible-body .van2 {
     display: inline-flex; }
-    .collapsible .collapsible-body .van2 p {
+    .collapsible-vane .collapsible-body .van2 p {
       margin-right: 20%; }
-    .collapsible .collapsible-body .van2 .select-wrapper input.select-dropdown {
+    .collapsible-vane .collapsible-body .van2 .select-wrapper input.select-dropdown {
       border: 1px solid black;
       text-align: center; }
-  .collapsible .collapsible-body .van3 {
+  .collapsible-vane .collapsible-body .van3 {
     display: inline-flex;
     height: auto; }
-    .collapsible .collapsible-body .van3 [type=checkbox] + label {
+    .collapsible-vane .collapsible-body .van3 [type=checkbox] + label {
       height: auto;
       font-size: 10px;
       margin-left: 40%; }
-  .collapsible .collapsible-body .van4 {
+  .collapsible-vane .collapsible-body .van4 {
     display: inline-flex;
     height: auto; }
-    .collapsible .collapsible-body .van4 [type=checkbox] + label {
+    .collapsible-vane .collapsible-body .van4 [type=checkbox] + label {
       height: auto;
       display: inline-flex;
       font-size: 10px;
       margin-left: 40%;
       margin-right: 20%; }
-      .collapsible .collapsible-body .van4 [type=checkbox] + label p {
+      .collapsible-vane .collapsible-body .van4 [type=checkbox] + label p {
         margin-right: 30px; }
-  .collapsible .collapsible-body .van5 {
+  .collapsible-vane .collapsible-body .van5 {
     display: inline-flex;
     height: auto; }
-    .collapsible .collapsible-body .van5 [type=checkbox] + label {
+    .collapsible-vane .collapsible-body .van5 [type=checkbox] + label {
       height: auto;
       display: inline-flex;
       font-size: 10px;
       margin-left: 40%;
       margin-right: 20%; }
-      .collapsible .collapsible-body .van5 [type=checkbox] + label p {
+      .collapsible-vane .collapsible-body .van5 [type=checkbox] + label p {
         margin-right: 20px; }
-  .collapsible .collapsible-body .van6 {
+  .collapsible-vane .collapsible-body .van6 {
     display: inline-flex;
     height: auto; }
-    .collapsible .collapsible-body .van6 [type=checkbox] + label {
+    .collapsible-vane .collapsible-body .van6 [type=checkbox] + label {
       height: auto;
       display: inline-flex;
       font-size: 10px;
       margin-left: 40%;
       margin-right: 20%; }
-      .collapsible .collapsible-body .van6 [type=checkbox] + label p {
+      .collapsible-vane .collapsible-body .van6 [type=checkbox] + label p {
         margin-right: 20px; }
-  .collapsible .collapsible-body .van7 {
+  .collapsible-vane .collapsible-body .van7 {
     display: inline-flex;
     height: auto; }
-    .collapsible .collapsible-body .van7 [type=checkbox] + label {
+    .collapsible-vane .collapsible-body .van7 [type=checkbox] + label {
       height: auto;
       display: inline-flex;
       font-size: 10px;
       margin-left: 40%;
       margin-right: 20%; }
-      .collapsible .collapsible-body .van7 [type=checkbox] + label p {
+      .collapsible-vane .collapsible-body .van7 [type=checkbox] + label p {
         margin-right: 20px; }
-  .collapsible .btn-a {
+  .collapsible-vane .btn-a {
     margin-top: 20%;
     background-color: white;
     width: 120px;
@@ -131,7 +131,7 @@ nav, nav a, nav ul a, span.badge.new {
     text-align: center;
     color: black;
     font-weight: bold; }
-  .collapsible .btn-b {
+  .collapsible-vane .btn-b {
     margin-top: 20%;
     background-color: pink;
     width: 120px;

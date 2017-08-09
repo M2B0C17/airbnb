@@ -41,6 +41,9 @@ $(document).ready(function(){
  
   initialize();
 
+$('.collapsible-huespedes').collapsible();
+$('.collapsible-huespedes1').collapsible();
+$('.collapsible-vane').collapsible();
 });
 
 
@@ -197,6 +200,3 @@ $(".btn-b").click(function(){
     }       
 });
 /*FIN Filtro vane*/
-
-
-

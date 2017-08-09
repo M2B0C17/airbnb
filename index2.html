@@ -51,19 +51,18 @@
             <div class="col l3 m3">
               <h6>Fechas</h6>
             </div>
-            <div class="col l3 m3">
-              <input type="text" name="llegada" placeholder="01/01/2018" class="cam_section__input">
+            <div class="col l5 m5">
+              <input type="text" name="daterange" value="09/08/2017 - 10/08/2017" />
             </div>
-            <div class="col l3 m3">
-              <input type="text" name="salida" placeholder="01/02/2018" class="cam_section__input">
-            </div>
-            <div class="input-field col l2 m2">
-                  <select class="validate">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                  </select>
+            <div class="input-field col l4 m4">
+                  <ul class="collapsible-huespedes" data-collapsible="accordion">
+                    <li>
+                      <div class="collapsible-header"><span>1</span> Huespedes</div>
+                      <div class="collapsible-body"><p>Adultos</p> <span><i class="fa fa-plus-circle menos" aria-hidden="true"></i>1<i class="fa fa-plus-circle mas" aria-hidden="true"></i></span></div>
+                      <div class="collapsible-body"><p>Niños<br><small>De 2 a 12</small></p> <span><i class="fa fa-plus-circle menos" aria-hidden="true"></i>1<i class="fa fa-plus-circle mas" aria-hidden="true"></i></span></div>
+                      <div class="collapsible-body"><p>Bebes<br><small>De 0 a 2</small></p> <span><i class="fa fa-plus-circle menos" aria-hidden="true"></i>1<i class="fa fa-plus-circle mas" aria-hidden="true"></i></span></div>
+                    </li>
+                  </ul>
               </div>
           </div>
           <div class="row">
@@ -132,7 +131,7 @@
             <!--Filtro vane-->
             <div class="row">
              <div class="col l12 m12 s12 vane_filtro">
-              <ul class="collapsible" data-collapsible="accordion">
+              <ul class="collapsible-vane" data-collapsible="accordion">
                 <li>
                   <div class="collapsible-header">
                     <span class="btn">Filtros</span>
@@ -376,7 +375,6 @@
     </div>
   </footer>
   <!-- Fin Footer -->
-  <script src="materialize-pagination.min.js"></script>
   <script src="dist/js/script.js"></script>
   <script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/ion-rangeslider/2.1.4/js/ion.rangeSlider.min.js"></script>
