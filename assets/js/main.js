@@ -32,67 +32,80 @@ $(document).ready(function(){
   });
 
 
+/*RANGO*/
+    var $range = $("#rango"),
+        $create_btn = $(".js-create-52"),
+        $destroy_btn = $(".js-destroy-52"),
+        slider;
 
-var $range = $("#rango"),
-    $create_btn = $(".js-create-52"),
-    $destroy_btn = $(".js-destroy-52"),
-    slider;
-
-var create = function () {
-    $range.ionRangeSlider({
-        type: "double",
-        min: 0,
-        max: 1000,
-        grid: true
-    });
+    var create = function () {
+        $range.ionRangeSlider({
+            type: "double",
+            min: 0,
+            max: 1000,
+            grid: true
+        });
 
     slider = $range.data("ionRangeSlider");
-};
+    };
 
-$create_btn.on("click", function () {
-    create();
-});
-
-$destroy_btn.on("click", function () {
-    slider && slider.destroy();
-});
-
-
-
-
-
-
-
-
-
-  /*Rango de precios 
-  $(function(){
-    $('#rango').ionRangeSlider({
-      type: "double",
-      min: 0,
-      max: 300000,
-      from: 0,
-      to: 300000,
-      hide_min_max: true,
-      hide_from_to: false,
-      grid: false
+    $create_btn.on("click", function () {
+        create();
     });
-        var valorUno = $('.irs-from').text()
-        var valorDos = $('.irs-to').text();
 
-        $('.cam_section__range-valor1').text(valorUno);
-        $('.cam_section__range-valor2').text(valorDos);
+    $destroy_btn.on("click", function () {
+        slider && slider.destroy();
+    });
 
-  });
+    var valor = $("#rango").val();
+    console.log(valor);
 
-    $('#search').attr('value', localStorage.getItem('lugar'));
-    $('#cam_fecha').attr('value', localStorage.getItem('fecha'));*/ 
- 
-  initialize();
 
-$('.collapsible-huespedes').collapsible();
-$('.collapsible-huespedes1').collapsible();
-$('.collapsible-vane').collapsible();
+      initialize();
+
+    $('.collapsible-huespedes').collapsible();
+    $('.collapsible-huespedes1').collapsible();
+    $('.collapsible-vane').collapsible();
+
+    //Contador de huespedes.
+
+    var contAdultos= 1;
+    var contBebes=0;
+    var contNinos=0;
+
+    $('.menos1').click(function(){
+        contAdultos--;
+        $('.adultoCantidad').html(contAdultos);
+    });
+
+    $('.mas1').click(function(){
+        contAdultos++;
+        $('.adultoCantidad').html(contAdultos);
+    });
+
+   $('.menos2').click(function(){
+        contNinos--;
+        $('.ninoCantidad').html(contNinos);
+    });
+
+    $('.mas2').click(function(){
+        contNinos++;
+        $('.ninoCantidad').html(contNinos);
+    });
+
+    $('.menos3').click(function(){
+        contBebes--;
+        $('.bebeCantidad').html(contBebes);
+    });
+
+    $('.mas3').click(function(){
+        contBebes++;
+        $('.bebeCantidad').html(contBebes);
+    });
+
+      $('#search').attr('value', localStorage.getItem('lugar'));
+      $('#fecha-ver').attr('value', localStorage.getItem('fecha'));
+
 });
 
 
