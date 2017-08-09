@@ -103,7 +103,7 @@
 	.btn-a{
 		margin-top: 20%;
 		background-color: white;
-		width: 150px;
+		width: 120px;
 		border: 1px solid black;
 		border-radius: 1px solid black;
 		text-align: center;
@@ -113,13 +113,26 @@
 	.btn-b{
 		margin-top: 20%;
 		background-color: pink;
-		width: 150px;
+		width: 120px;
 		border-radius: 1px solid pink;
 		text-align: center;
 		color: white;
 		font-weight: bold;
 	}
 }
+
+/*Estilo agregado vane*/
+.caja{
+	position: relative;
+		z-index: 0;
+	h2{
+		margin-top: -60px;
+		color: white;
+		position: relative;
+		z-index: 1;
+	}
+}
+/* Fin Estilo agregado vane*/
 
 body {
     display: flex;
