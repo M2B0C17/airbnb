@@ -238,6 +238,9 @@ nav, nav a, nav ul a, span.badge.new {
     font-weight: bold; }
 
 /* Inicio MAPA */
+.mapa .mac_cajaMApa {
+  position: absolute;
+  padding-left: 200px; }
 .mapa #map {
   height: 100%;
   width: 100%; }
@@ -264,7 +267,9 @@ footer h6 {
 
 /* Fin FOOTER */
 .val_filtros {
+  width: 100%; }
   width: 70%; }
+
 
 .val_filtros__btn {
   height: 5em;
@@ -288,7 +293,6 @@ footer h6 {
   width: 65px;
   font-weight: bold; }
 
-
 .card .card-image .card-title {
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -309,7 +313,6 @@ footer h6 {
   width: 59px;
   transition: all 2s ease; }
 
-
 .val_tarjeta__contenido__img {
   position: relative;
   top: -6em;
@@ -319,19 +322,16 @@ footer h6 {
 
 .val_tarjeta__contenido__title {
   font-weight: bold;
-<
   color: #7BBFEA !important; }
 
 .val_tarjeta__contenido__text {
   color: #7BBFEA !important;
   font-size: 10px; }
-
   color: #7BBFEA; }
 
 .val_tarjeta__contenido__text {
   color: #7BBFEA;
   font-size: 12px; }
-
 
 .val_tarjeta__estrellas {
   weight: 70px; }
