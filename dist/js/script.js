@@ -19908,33 +19908,34 @@ $(document).ready(function(){
 	    values: [0, 10, 100, 1000, 10000, 100000, 1000000]
 	});
 
-   /*Calendario*/
+  /*Calendario*/
   $(function() {
       $('input[name="daterange"]').daterangepicker();
   });
-});
 
-   /*Rango de precios*/	 
-$(function(){
-  $('#rango').ionRangeSlider({
-    type: "double",
-    min: 1000,
-    max: 2000,
-    from: 1200,
-    to: 1800,
-    hide_min_max: true,
-    hide_from_to: false,
-    grid: false,
+  /*Rango de precios*/  
+  $(function(){
+    $('#rango').ionRangeSlider({
+      type: "double",
+      min: 1000,
+      max: 2000,
+      from: 1200,
+      to: 1800,
+      hide_min_max: true,
+      hide_from_to: false,
+      grid: false,
+    });
+
+    var valorUno = $('.irs-from').text();
+    var valorDos = $('.irs-to').text();
+
+    $('.cam_section__range-valor1').text(valorUno);
+    $('.cam_section__range-valor2').text(valorDos);
+
   });
 
-  var valorUno = $('.irs-from').text();
-  var valorDos = $('.irs-to').text();
-
-  $('.cam_section__range-valor1').text(valorUno);
-  $('.cam_section__range-valor2').text(valorDos);
-
+  initialize();
 });
-
 
 
 /* MAPA */
@@ -19966,12 +19967,6 @@ function initMap() {
         // En caso de que la pagina no admita geolocalizacion
         handleLocationError(false, infoWindow, map.getCenter());
     }
-
-   	 /* Autocomplete */
-	  var final = (document.getElementById('search'));
-	  var autocomplete = new google.maps.places.Autocomplete(final);
-	  autocomplete.bindTo('bounds', map);
-
 }
 
 // En caso de errores de ubicación
@@ -19982,6 +19977,14 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: Your browser doesn\'t support geolocation.');
 }
 	
+function initialize() {
+  var final = document.getElementById('search');
+  var autocomplete = new google.maps.places.Autocomplete(final);
+  var destino = document.getElementById('nav-donde');
+  var autocompletedos = new google.maps.places.Autocomplete(destino);
+}
+
+
 
 
 
