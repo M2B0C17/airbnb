@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Airbnb</title>
-  <!-- Viewport -->
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minium-scale=1.0">
-  <!-- Pagination Materialize -->
+  <title>Airbnb</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- FIN Pagination Materialize -->
-    <link rel="icon" type="image/png" href="assets/img/airbnb.png" />
+  <!--PLUGIN RANGE-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/ion.rangeslider/2.0.6/css/ion.rangeSlider.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/ion.rangeslider/2.0.6/css/ion.rangeSlider.skinFlat.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+  <link rel="icon" type="image/png" href="assets/img/airbnb.png" />
   <link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
 </head>
+
 <body>
   <!-- Inicio Navbar -->
   <nav>
@@ -43,16 +45,16 @@
   <section class="comprobar">
   <!--Div comprobar información de index.html-->
     <div class="row">
-      <div class="col m10 l10">
+      <div class="col m7 l7">
         <div class="cam_section__contenedor contenedor">
           <div class="row">
-            <div class="col l2 m2">
+            <div class="col l3 m3">
               <h6>Fechas</h6>
             </div>
-            <div class="col l2 m2">
+            <div class="col l3 m3">
               <input type="text" name="llegada" placeholder="01/01/2018" class="cam_section__input">
             </div>
-            <div class="col l2 m2">
+            <div class="col l3 m3">
               <input type="text" name="salida" placeholder="01/02/2018" class="cam_section__input">
             </div>
             <div class="input-field col l2 m2">
@@ -65,24 +67,24 @@
               </div>
           </div>
           <div class="row">
-            <div class="col l2 m2">
+            <div class="col l3 m3">
               <h6>Tipos de <br>habitaciones<span><i class="fa fa-question-circle" aria-hidden="true"></i></span></h6>
             </div>
-            <div class="col l2 m2">
+            <div class="col l3 m3">
               <h6>
                 <span><i class="fa fa-home" aria-hidden="true"></i></span> 
                 Casa entera 
                 <input type="checkbox" id="test5"/>
               </h6>
             </div>
-            <div class="col l2 m2">
+            <div class="col l3 m3">
               <h6>
                 <span><i class="fa fa-user" aria-hidden="true"></i></span> 
                 Habitación<br>privada 
                 <input type="checkbox" id="test5"/>
               </h6>
             </div>
-            <div class="col l2 m2">
+            <div class="col l3 m3">
               <h6>
                 <span><i class="fa fa-users" aria-hidden="true"></i></span> 
                 Habitación<br>compartida 
@@ -95,7 +97,12 @@
               <h6>Rango de<br>precios</h6>
             </div>
             <div class="col l8 m8">
-              <div id="test-slider"></div>
+              <div class="cam_section__range">
+                <input type="text" id="rango" class="cam_section__range-medir">
+                <div class=" cam_section__range-valores">
+                  <div class="cam_section__range-valores-entre text-center"><span class="cam_section__range-valor1"></span> - <span class="cam_section__range-valor2"></span></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -286,6 +293,7 @@
             
             </div>
           </div> <!--aqui termina texto de informacion-->
+
           
           <!--MODIFICACION HECHA POR VANE PARA LA IMPRESION DEL FILTRO-->
           <div class="row">
@@ -298,6 +306,9 @@
 			 <!--FIN MODIFICACION HECHA POR VANE PARA LA IMPRESION DEL FILTRO-->
 
            <!--estas clases vienen predefinidas por el mismo frameworks-->
+
+           <div class="row"> <!--estas clases vienen predefinidas por el mismo frameworks-->
+
                 <div class="col m6 l6 left">
                     <div class="val_tarjeta card">
                       <div class="card-image">
@@ -317,9 +328,9 @@
                 <!--aqui termina la primera card con la imagen-->
             	<div class="col m6 l6 rigth">
                     <div class="card">
-                      <div class="card-image">
-                          <img class="val_tarjeta__imgdos" src="assets/img/4.jpg">
-                          <span class="card-title">caja con el precio</span>
+                       <div class="card-image">
+                          <img class="val_tarjeta__imguno" src="assets/img/5.jpg">
+                          <div class="val_tarjeta__cajaprecios"><span class="card-title">Caja con el precio</span></div>
                       </div>
                       <div class="val_tarjeta__contenido card-content">
                           <p class="val_tarjeta__contenido__title">bright and Cheerful 1BR by GGps...</p>
@@ -333,21 +344,12 @@
               </div>
           </div>
       </div>
-      <div class="col m2 l2">
+      <div class="col m3 l3 right">
         <!-- Inicio Mapa -->
-        <div class="mapa">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col m4 l4">
-                
-              </div>
-              <div class="col m8 l8">
-                <!-- MAPA -->
-                <div id="map"></div>
-                <!-- Mapa -->
-              </div>
-            </div>
-          </div>
+        <div class="mapa mac_cajaMApa" style="position: absolute; width: 42.5%; margin-top: -897px; margin-left: 169px; z-index: -3;">
+            <!-- MAPA -->
+            <div id="map" style="width: 100%; margin-right: 0px; position: absolute; height: 865px;"></div>
+            <!-- Mapa -->
         </div>
         <!-- Fin Mapa -->
       </div>
@@ -395,10 +397,14 @@
     </div>
   </footer>
   <!-- Fin Footer -->
-             
+  <script src="materialize-pagination.min.js"></script>
   <script src="dist/js/script.js"></script>
-  <script type="text/javascript" src="assets/js/data.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/ion-rangeslider/2.1.4/js/ion.rangeSlider.min.js"></script>
   <script src="https://use.fontawesome.com/046c2163eb.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
   <!-- GEOLOCALITATION AIzaSyBMnuVYJyoPs1ueC9vwDC5TjXoYu08puC0 -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMnuVYJyoPs1ueC9vwDC5TjXoYu08puC0&callback=initMap&libraries=places"></script>
 </body>
