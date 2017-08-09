@@ -163,6 +163,11 @@ nav, nav a, nav ul a, span.badge.new {
 
 /* Inicio MAPA */
 .mapa{
+	.mac_cajaMApa{
+		position: absolute;
+		padding-left: 200px;
+	}
+
 	#map{
 		height: 100%;
 		width: 100%;
@@ -202,7 +207,7 @@ footer{
 /* Fin FOOTER */
 
 .val_filtros{
-	width: 70%;
+	width: 100%;
 }
 
 .val_filtros__btn{
