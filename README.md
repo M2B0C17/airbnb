@@ -15,8 +15,3 @@ El proyectos fue realizado con las siguientes dependencias NPM:
 
 		o	Jquery –v.3.1.1
 
-Levantamiento ambiente de desarrollo
-	o Descargar e instalar todas las dependencias utilizadas de npm.
-	o Correr gulp para que se realizen tareas especificas.
-	o Crear funcionalidades con manejos de archivo .JSON para mostrar la información requerida
-
